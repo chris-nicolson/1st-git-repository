@@ -1,0 +1,140 @@
+[Mon Jan 21 22:44:25 2013] [notice] Apache/2.2.22 (Win32) PHP/5.2.17 configured -- resuming normal operations
+[Mon Jan 21 22:44:25 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Mon Jan 21 22:44:25 2013] [notice] Parent: Created child process 4244
+[Mon Jan 21 22:44:26 2013] [notice] Child 4244: Child process is running
+[Mon Jan 21 22:44:26 2013] [notice] Child 4244: Acquired the start mutex.
+[Mon Jan 21 22:44:26 2013] [notice] Child 4244: Starting 250 worker threads.
+[Mon Jan 21 22:44:26 2013] [notice] Child 4244: Starting thread to listen on port 8082.
+[Mon Jan 21 22:45:52 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Mon Jan 21 22:45:52 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Mon Jan 21 22:45:52 2013] [notice] Parent: Created child process 1752
+[Mon Jan 21 22:45:53 2013] [notice] Child 1752: Child process is running
+[Mon Jan 21 22:45:53 2013] [notice] Child 1752: Acquired the start mutex.
+[Mon Jan 21 22:45:53 2013] [notice] Child 1752: Starting 250 worker threads.
+[Mon Jan 21 22:45:53 2013] [notice] Child 1752: Starting thread to listen on port 8082.
+[Mon Jan 21 22:47:50 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Mon Jan 21 22:47:50 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Mon Jan 21 22:47:50 2013] [notice] Parent: Created child process 5508
+[Mon Jan 21 22:47:50 2013] [notice] Child 5508: Child process is running
+[Mon Jan 21 22:47:50 2013] [notice] Child 5508: Acquired the start mutex.
+[Mon Jan 21 22:47:50 2013] [notice] Child 5508: Starting 250 worker threads.
+[Mon Jan 21 22:47:50 2013] [notice] Child 5508: Starting thread to listen on port 8082.
+[Mon Jan 21 22:48:16 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Mon Jan 21 22:48:16 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Mon Jan 21 22:48:16 2013] [notice] Parent: Created child process 6044
+[Mon Jan 21 22:48:16 2013] [notice] Child 6044: Child process is running
+[Mon Jan 21 22:48:16 2013] [notice] Child 6044: Acquired the start mutex.
+[Mon Jan 21 22:48:16 2013] [notice] Child 6044: Starting 250 worker threads.
+[Mon Jan 21 22:48:16 2013] [notice] Child 6044: Starting thread to listen on port 8082.
+[Mon Jan 21 22:49:43 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Mon Jan 21 22:49:43 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Mon Jan 21 22:49:43 2013] [notice] Parent: Created child process 5072
+[Mon Jan 21 22:49:44 2013] [notice] Child 5072: Child process is running
+[Mon Jan 21 22:49:44 2013] [notice] Child 5072: Acquired the start mutex.
+[Mon Jan 21 22:49:44 2013] [notice] Child 5072: Starting 250 worker threads.
+[Mon Jan 21 22:49:44 2013] [notice] Child 5072: Starting thread to listen on port 8082.
+[Mon Jan 21 22:50:09 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Mon Jan 21 22:50:09 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Mon Jan 21 22:50:09 2013] [notice] Parent: Created child process 4164
+[Mon Jan 21 22:50:09 2013] [notice] Child 4164: Child process is running
+[Mon Jan 21 22:50:09 2013] [notice] Child 4164: Acquired the start mutex.
+[Mon Jan 21 22:50:09 2013] [notice] Child 4164: Starting 250 worker threads.
+[Mon Jan 21 22:50:09 2013] [notice] Child 4164: Starting thread to listen on port 8082.
+[Tue Jan 22 10:30:00 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Tue Jan 22 10:30:00 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Tue Jan 22 10:30:00 2013] [notice] Parent: Created child process 4868
+[Tue Jan 22 10:30:00 2013] [notice] Child 4868: Child process is running
+[Tue Jan 22 10:30:00 2013] [notice] Child 4868: Acquired the start mutex.
+[Tue Jan 22 10:30:00 2013] [notice] Child 4868: Starting 250 worker threads.
+[Tue Jan 22 10:30:00 2013] [notice] Child 4868: Starting thread to listen on port 8082.
+[Tue Jan 22 10:34:23 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Tue Jan 22 10:34:23 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Tue Jan 22 10:34:23 2013] [notice] Parent: Created child process 5720
+[Tue Jan 22 10:34:23 2013] [notice] Child 5720: Child process is running
+[Tue Jan 22 10:34:23 2013] [notice] Child 5720: Acquired the start mutex.
+[Tue Jan 22 10:34:23 2013] [notice] Child 5720: Starting 250 worker threads.
+[Tue Jan 22 10:34:23 2013] [notice] Child 5720: Starting thread to listen on port 8082.
+[Tue Jan 22 10:57:33 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Tue Jan 22 10:57:33 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Tue Jan 22 10:57:33 2013] [notice] Parent: Created child process 4580
+[Tue Jan 22 10:57:33 2013] [notice] Child 4580: Child process is running
+[Tue Jan 22 10:57:33 2013] [notice] Child 4580: Acquired the start mutex.
+[Tue Jan 22 10:57:33 2013] [notice] Child 4580: Starting 250 worker threads.
+[Tue Jan 22 10:57:33 2013] [notice] Child 4580: Starting thread to listen on port 8082.
+[Tue Jan 22 11:25:43 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Tue Jan 22 11:25:43 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Tue Jan 22 11:25:43 2013] [notice] Parent: Created child process 5576
+[Tue Jan 22 11:25:43 2013] [notice] Child 5576: Child process is running
+[Tue Jan 22 11:25:43 2013] [notice] Child 5576: Acquired the start mutex.
+[Tue Jan 22 11:25:43 2013] [notice] Child 5576: Starting 250 worker threads.
+[Tue Jan 22 11:25:43 2013] [notice] Child 5576: Starting thread to listen on port 8082.
+[Tue Jan 22 11:25:58 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:38:22 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Tue Jan 22 11:38:22 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Tue Jan 22 11:38:22 2013] [notice] Parent: Created child process 5136
+[Tue Jan 22 11:38:22 2013] [notice] Child 5136: Child process is running
+[Tue Jan 22 11:38:22 2013] [notice] Child 5136: Acquired the start mutex.
+[Tue Jan 22 11:38:22 2013] [notice] Child 5136: Starting 250 worker threads.
+[Tue Jan 22 11:38:22 2013] [notice] Child 5136: Starting thread to listen on port 8082.
+[Tue Jan 22 11:38:51 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:47:08 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_LNUMBER, expecting ',' or ';' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 7
+[Tue Jan 22 11:47:08 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:47:46 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '<' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 7
+[Tue Jan 22 11:47:46 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:48:30 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:50:43 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:51:06 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '<' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 7
+[Tue Jan 22 11:51:06 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:51:19 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:51:29 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '<' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 7
+[Tue Jan 22 11:51:29 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:51:40 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:52:27 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:53:43 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 8
+[Tue Jan 22 11:53:43 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:54:17 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 11:55:02 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:58:32 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:58:32 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:59:01 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:59:01 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:59:02 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:59:02 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:59:03 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:59:03 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:59:03 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:59:03 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:59:59 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:59:59 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 12:59:59 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 20
+[Tue Jan 22 12:59:59 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:02:22 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:02:22 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:02:23 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:02:23 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:03:52 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:03:52 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:05:01 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:05:01 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:05:02 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:05:02 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:07:11 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:07:11 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:07:13 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:07:13 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:07:54 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 11
+[Tue Jan 22 13:07:54 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:14:26 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:17:05 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '/' in D:\\Programs\\Acquia Dev Desktop\\site\\test.php on line 2
+[Tue Jan 22 13:17:05 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:18:24 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:21:46 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:23:20 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Tue Jan 22 13:32:54 2013] [error] [client 127.0.0.1] File does not exist: D:/Programs/Acquia Dev Desktop/site/favicon.ico
+[Wed Jan 23 11:36:29 2013] [notice] Apache/2.2.22 (Win32) PHP/5.3.18 configured -- resuming normal operations
+[Wed Jan 23 11:36:29 2013] [notice] Server built: Jan 28 2012 11:16:39
+[Wed Jan 23 11:36:29 2013] [notice] Parent: Created child process 3788
+[Wed Jan 23 11:36:29 2013] [notice] Child 3788: Child process is running
+[Wed Jan 23 11:36:29 2013] [notice] Child 3788: Acquired the start mutex.
+[Wed Jan 23 11:36:29 2013] [notice] Child 3788: Starting 250 worker threads.
+[Wed Jan 23 11:36:29 2013] [notice] Child 3788: Starting thread to listen on port 8082.

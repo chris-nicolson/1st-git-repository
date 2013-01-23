@@ -1,0 +1,16 @@
+[vars]
+SITE_NAME=My Acquia Drupal Site
+ADM_USERNAME=Chris Nicolson
+ADM_PASSWORD=Summer0987
+ADM_EMAIL=info@onlineedge.ca
+DB_NAME=@@DB_NAME@@
+DB_USERNAME=@@DB_USERNAME@@
+DB_PASSWORD=@@DB_PASSWORD@@
+APACHE_PORT=8082
+MYSQL_PORT=33066
+INSTALL_DIR=D:\Programs\Acquia Dev Desktop
+SITE_DIR=D:\Programs\Acquia Dev Desktop\site
+PLATFORM_NAME=windows
+AD_VER=7.19.18
+SYS_USER=Chris Nicolson
+UPGRADE=normal

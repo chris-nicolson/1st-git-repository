@@ -1,0 +1,1647 @@
+[06:44:21] Post install script started 01/22/2013
+[06:44:21] Upgrade:0
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/MasterLicense.txt"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/apache/conf/httpd.conf"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/apache/conf/vhosts.conf"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/mysql/my.cnf"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/phpmyadmin/config.inc.php"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/phpmyadmin/config.inc.php"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/AcquiaDevDesktopControlPanel/static.ini"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/AcquiaDevDesktopControlPanel/dynamic.ini"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/php5_2/php.ini"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/php5_3/php.ini"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/php5_4/php.ini"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/mysql/bin/mysql.cmd"
+[06:44:21] Making substitutions in "D:\Programs\Acquia Dev Desktop/mysql/my.cnf"
+[06:44:21] Creating hashlist for 'D:\Programs\Acquia Dev Desktop\site'...
+[06:44:23] Starting Apache
+[06:44:23] Exec:cmd.exe /c start "apache" /B httpd.exe -D php5_2 -f "D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf" [cwd:D:\Programs\Acquia Dev Desktop\apache\bin]
+[06:44:24] Exec result: 0 
+STDOUT: 
+STDERR:
+[06:44:24] Wait for apache to start
+[06:44:24] Wait succeeded
+[06:44:24] Starting MySQL
+[06:44:24] Exec:cmd.exe /c start "mysqld" /B mysqld.exe --defaults-file="D:\Programs\Acquia Dev Desktop\mysql\my.cnf" >"C:\Users\CHRISN~1\AppData\Local\Temp\damp_setup.out" 2>"C:\Users\CHRISN~1\AppData\Local\Temp\damp_setup.err" [cwd:D:\Programs\Acquia Dev Desktop\mysql\bin]
+[06:44:25] Exec result: 0 
+STDOUT: 
+STDERR:
+[06:44:25] Waiting for mysql to start
+[06:44:26] Wait succeeded
+[06:44:26] Runing SQL query:CREATE DATABASE `acquia_drupal`
+[06:44:26] Runing SQL query:GRANT ALL PRIVILEGES ON *.* TO `drupaluser`@'localhost' IDENTIFIED BY ''
+[06:44:26] Runing SQL query:GRANT GRANT OPTION ON *.* TO `drupaluser`@'localhost'
+[06:44:26] Runing SQL query:FLUSH PRIVILEGES
+[06:44:26] Exec:"D:\Programs\Acquia Dev Desktop\xmail\XMail.exe" --install-auto
+[06:44:26] Exec result: 0 
+STDOUT:XMail Server installed.
+ 
+STDERR:
+[06:44:26] Exec:reg add HKLM\Software\GNU\XMail /f /v MAIL_ROOT /t REG_MULTI_SZ /d "D:\Programs\Acquia Dev Desktop\xmail\MailRoot"
+[06:44:27] Exec result: 0 
+STDOUT:The operation completed successfully.
+ 
+STDERR:
+[06:44:27] Exec:reg add HKLM\Software\GNU\XMail /f /v MAIL_CMD_LINE /t REG_MULTI_SZ /d "-P- -B- -X- -Y- -F- -Mx 3"
+[06:44:27] Exec result: 0 
+STDOUT:The operation completed successfully.
+ 
+STDERR:
+[06:44:27] Exec:net start XMail
+[06:44:30] Exec result: 0 
+STDOUT:The XMail Server service is starting.
+The XMail Server service was started successfully.
+
+ 
+STDERR:
+[06:44:30] Running Drupal web installer...
+[06:44:30] DWI: begin
+[06:44:30] DWI: GET(http://localhost:8082/install.php)
+[06:44:32] DWI: returned html:
+[06:44:32] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Database configuration | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.base.css?0");
+@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/form.js?v=7.19"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/states.js?v=7.19"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/collapse.js?v=7.19"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "states":{"#edit-mysql":{"visible":{":input[name=driver]":{"value":"mysql"}}}, "#edit-sqlite":{"visible":{":input[name=driver]":{"value":"sqlite"}}}, "#edit-sqlsrv":{"visible":{":input[name=driver]":{"value":"sqlsrv"}}}}, "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1, "themes\u002Fseven\u002Fie6.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1, "misc\u002Fform.js":1, "misc\u002Fstates.js":1, "misc\u002Fcollapse.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Database configuration</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="active">Set up database<span class="element-invisible">(active)</span></li><li>Install profile</li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <form action="/install.php?profile=acquia&amp;locale=en" method="post" id="install-settings-form" accept-charset="UTF-8"><div><div class="form-item form-type-radios form-item-driver">
+  <label for="edit-driver">Database type <span class="form-required" title="This field is required.">*</span></label>
+ <div id="edit-driver" class="form-radios"><div class="form-item form-type-radio form-item-driver">
+ <input type="radio" id="edit-driver-mysql" name="driver" value="mysql" checked="checked" class="form-radio" />  <label class="option" for="edit-driver-mysql">MySQL, MariaDB, or equivalent </label>
+
+</div>
+<div class="form-item form-type-radio form-item-driver">
+ <input type="radio" id="edit-driver-sqlite" name="driver" value="sqlite" class="form-radio" />  <label class="option" for="edit-driver-sqlite">SQLite </label>
+
+</div>
+<div class="form-item form-type-radio form-item-driver">
+ <input type="radio" id="edit-driver-sqlsrv" name="driver" value="sqlsrv" class="form-radio" />  <label class="option" for="edit-driver-sqlsrv">Microsoft SQL Server </label>
+
+</div>
+</div>
+<div class="description">The type of database your Acquia Drupal data will be stored in.</div>
+</div>
+<h2 class="js-hide">MySQL, MariaDB, or equivalent settings</h2><div id="edit-mysql" class="form-wrapper"><div class="form-item form-type-textfield form-item-mysql-database">
+  <label for="edit-mysql-database">Database name <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mysql-database" name="mysql[database]" value="" size="45" maxlength="128" class="form-text required" />
+<div class="description">The name of the database your Acquia Drupal data will be stored in. It must exist on your server before Acquia Drupal can be installed.</div>
+</div>
+<div class="form-item form-type-textfield form-item-mysql-username">
+  <label for="edit-mysql-username">Database username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mysql-username" name="mysql[username]" value="" size="45" maxlength="128" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-mysql-password">
+  <label for="edit-mysql-password">Database password </label>
+ <input type="password" id="edit-mysql-password" name="mysql[password]" size="45" maxlength="128" class="form-text" />
+</div>
+<fieldset class="collapsible collapsed form-wrapper" id="edit-mysql--2"><legend><span class="fieldset-legend">Advanced options</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">These options are only necessary for some sites. If you're not sure what you should enter here, leave the default settings or check with your hosting provider.</div><div class="form-item form-type-textfield form-item-mysql-host">
+  <label for="edit-mysql-host">Database host <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mysql-host" name="mysql[host]" value="localhost" size="45" maxlength="255" class="form-text required" />
+<div class="description">If your database is located on a different server, change this.</div>
+</div>
+<div class="form-item form-type-textfield form-item-mysql-port">
+  <label for="edit-mysql-port">Database port </label>
+ <input type="text" id="edit-mysql-port" name="mysql[port]" value="" size="45" maxlength="5" class="form-text" />
+<div class="description">If your database server is listening to a non-standard port, enter its number.</div>
+</div>
+<div class="form-item form-type-textfield form-item-mysql-db-prefix">
+  <label for="edit-mysql-db-prefix">Table prefix </label>
+ <input type="text" id="edit-mysql-db-prefix" name="mysql[db_prefix]" value="" size="45" maxlength="128" class="form-text" />
+<div class="description">If more than one application will be sharing this database, enter a table prefix such as <em>acquia_</em> for your Acquia Drupal site here.</div>
+</div>
+</div></fieldset>
+</div><h2 class="js-hide">SQLite settings</h2><div id="edit-sqlite" class="form-wrapper"><div class="form-item form-type-textfield form-item-sqlite-database">
+  <label for="edit-sqlite-database">Database file <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlite-database" name="sqlite[database]" value="sites/default/files/.ht.sqlite" size="45" maxlength="128" class="form-text required" />
+<div class="description">The absolute path to the file where Acquia Drupal data will be stored. This must be writable by the web server and should exist outside of the web root.</div>
+</div>
+<fieldset class="collapsible collapsed form-wrapper" id="edit-sqlite--2"><legend><span class="fieldset-legend">Advanced options</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">These options are only necessary for some sites. If you're not sure what you should enter here, leave the default settings or check with your hosting provider.</div><div class="form-item form-type-textfield form-item-sqlite-db-prefix">
+  <label for="edit-sqlite-db-prefix">Table prefix </label>
+ <input type="text" id="edit-sqlite-db-prefix" name="sqlite[db_prefix]" value="" size="45" maxlength="128" class="form-text" />
+<div class="description">If more than one application will be sharing this database, enter a table prefix such as <em>acquia_</em> for your Acquia Drupal site here.</div>
+</div>
+</div></fieldset>
+</div><h2 class="js-hide">Microsoft SQL Server settings</h2><div id="edit-sqlsrv" class="form-wrapper"><div class="form-item form-type-textfield form-item-sqlsrv-database">
+  <label for="edit-sqlsrv-database">Database name <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlsrv-database" name="sqlsrv[database]" value="" size="45" maxlength="128" class="form-text required" />
+<div class="description">The name of the database your Acquia Drupal data will be stored in. It must exist on your server before Acquia Drupal can be installed.</div>
+</div>
+<div class="form-item form-type-textfield form-item-sqlsrv-username">
+  <label for="edit-sqlsrv-username">Database username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlsrv-username" name="sqlsrv[username]" value="" size="45" maxlength="128" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-sqlsrv-password">
+  <label for="edit-sqlsrv-password">Database password </label>
+ <input type="password" id="edit-sqlsrv-password" name="sqlsrv[password]" size="45" maxlength="128" class="form-text" />
+</div>
+<fieldset class="collapsible collapsed form-wrapper" id="edit-sqlsrv--2"><legend><span class="fieldset-legend">Advanced options</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">These options are only necessary for some sites. If you're not sure what you should enter here, leave the default settings or check with your hosting provider.</div><div class="form-item form-type-textfield form-item-sqlsrv-host">
+  <label for="edit-sqlsrv-host">Database host <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlsrv-host" name="sqlsrv[host]" value="localhost" size="45" maxlength="255" class="form-text required" />
+<div class="description">If your database is located on a different server, change this.</div>
+</div>
+<div class="form-item form-type-textfield form-item-sqlsrv-port">
+  <label for="edit-sqlsrv-port">Database port </label>
+ <input type="text" id="edit-sqlsrv-port" name="sqlsrv[port]" value="" size="45" maxlength="5" class="form-text" />
+<div class="description">If your database server is listening to a non-standard port, enter its number.</div>
+</div>
+<div class="form-item form-type-textfield form-item-sqlsrv-db-prefix">
+  <label for="edit-sqlsrv-db-prefix">Table prefix </label>
+ <input type="text" id="edit-sqlsrv-db-prefix" name="sqlsrv[db_prefix]" value="" size="45" maxlength="128" class="form-text" />
+<div class="description">If more than one application will be sharing this database, enter a table prefix such as <em>acquia_</em> for your Acquia Drupal site here.</div>
+</div>
+</div></fieldset>
+</div><input type="hidden" name="form_build_id" value="form-fbPtClPdK2Vn-w2AKdf8uspX8lWHT5xT5_JYpLkzc0c" />
+<input type="hidden" name="form_id" value="install_settings_form" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-save" name="op" value="Save and continue" class="form-submit" /></div></div></form>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:32] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:33] DWI: returned html:
+[06:44:33] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Database configuration | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.base.css?0");
+@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/form.js?v=7.19"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/states.js?v=7.19"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/collapse.js?v=7.19"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "states":{"#edit-mysql":{"visible":{":input[name=driver]":{"value":"mysql"}}}, "#edit-sqlite":{"visible":{":input[name=driver]":{"value":"sqlite"}}}, "#edit-sqlsrv":{"visible":{":input[name=driver]":{"value":"sqlsrv"}}}}, "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1, "themes\u002Fseven\u002Fie6.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1, "misc\u002Fform.js":1, "misc\u002Fstates.js":1, "misc\u002Fcollapse.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Database configuration</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="active">Set up database<span class="element-invisible">(active)</span></li><li>Install profile</li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <form action="/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs" method="post" id="install-settings-form" accept-charset="UTF-8"><div><div class="form-item form-type-radios form-item-driver">
+  <label for="edit-driver">Database type <span class="form-required" title="This field is required.">*</span></label>
+ <div id="edit-driver" class="form-radios"><div class="form-item form-type-radio form-item-driver">
+ <input type="radio" id="edit-driver-mysql" name="driver" value="mysql" checked="checked" class="form-radio" />  <label class="option" for="edit-driver-mysql">MySQL, MariaDB, or equivalent </label>
+
+</div>
+<div class="form-item form-type-radio form-item-driver">
+ <input type="radio" id="edit-driver-sqlite" name="driver" value="sqlite" class="form-radio" />  <label class="option" for="edit-driver-sqlite">SQLite </label>
+
+</div>
+<div class="form-item form-type-radio form-item-driver">
+ <input type="radio" id="edit-driver-sqlsrv" name="driver" value="sqlsrv" class="form-radio" />  <label class="option" for="edit-driver-sqlsrv">Microsoft SQL Server </label>
+
+</div>
+</div>
+<div class="description">The type of database your Acquia Drupal data will be stored in.</div>
+</div>
+<h2 class="js-hide">MySQL, MariaDB, or equivalent settings</h2><div id="edit-mysql" class="form-wrapper"><div class="form-item form-type-textfield form-item-mysql-database">
+  <label for="edit-mysql-database">Database name <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mysql-database" name="mysql[database]" value="" size="45" maxlength="128" class="form-text required" />
+<div class="description">The name of the database your Acquia Drupal data will be stored in. It must exist on your server before Acquia Drupal can be installed.</div>
+</div>
+<div class="form-item form-type-textfield form-item-mysql-username">
+  <label for="edit-mysql-username">Database username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mysql-username" name="mysql[username]" value="" size="45" maxlength="128" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-mysql-password">
+  <label for="edit-mysql-password">Database password </label>
+ <input type="password" id="edit-mysql-password" name="mysql[password]" size="45" maxlength="128" class="form-text" />
+</div>
+<fieldset class="collapsible collapsed form-wrapper" id="edit-mysql--2"><legend><span class="fieldset-legend">Advanced options</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">These options are only necessary for some sites. If you're not sure what you should enter here, leave the default settings or check with your hosting provider.</div><div class="form-item form-type-textfield form-item-mysql-host">
+  <label for="edit-mysql-host">Database host <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mysql-host" name="mysql[host]" value="localhost" size="45" maxlength="255" class="form-text required" />
+<div class="description">If your database is located on a different server, change this.</div>
+</div>
+<div class="form-item form-type-textfield form-item-mysql-port">
+  <label for="edit-mysql-port">Database port </label>
+ <input type="text" id="edit-mysql-port" name="mysql[port]" value="" size="45" maxlength="5" class="form-text" />
+<div class="description">If your database server is listening to a non-standard port, enter its number.</div>
+</div>
+<div class="form-item form-type-textfield form-item-mysql-db-prefix">
+  <label for="edit-mysql-db-prefix">Table prefix </label>
+ <input type="text" id="edit-mysql-db-prefix" name="mysql[db_prefix]" value="" size="45" maxlength="128" class="form-text" />
+<div class="description">If more than one application will be sharing this database, enter a table prefix such as <em>acquia_</em> for your Acquia Drupal site here.</div>
+</div>
+</div></fieldset>
+</div><h2 class="js-hide">SQLite settings</h2><div id="edit-sqlite" class="form-wrapper"><div class="form-item form-type-textfield form-item-sqlite-database">
+  <label for="edit-sqlite-database">Database file <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlite-database" name="sqlite[database]" value="sites/default/files/.ht.sqlite" size="45" maxlength="128" class="form-text required" />
+<div class="description">The absolute path to the file where Acquia Drupal data will be stored. This must be writable by the web server and should exist outside of the web root.</div>
+</div>
+<fieldset class="collapsible collapsed form-wrapper" id="edit-sqlite--2"><legend><span class="fieldset-legend">Advanced options</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">These options are only necessary for some sites. If you're not sure what you should enter here, leave the default settings or check with your hosting provider.</div><div class="form-item form-type-textfield form-item-sqlite-db-prefix">
+  <label for="edit-sqlite-db-prefix">Table prefix </label>
+ <input type="text" id="edit-sqlite-db-prefix" name="sqlite[db_prefix]" value="" size="45" maxlength="128" class="form-text" />
+<div class="description">If more than one application will be sharing this database, enter a table prefix such as <em>acquia_</em> for your Acquia Drupal site here.</div>
+</div>
+</div></fieldset>
+</div><h2 class="js-hide">Microsoft SQL Server settings</h2><div id="edit-sqlsrv" class="form-wrapper"><div class="form-item form-type-textfield form-item-sqlsrv-database">
+  <label for="edit-sqlsrv-database">Database name <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlsrv-database" name="sqlsrv[database]" value="" size="45" maxlength="128" class="form-text required" />
+<div class="description">The name of the database your Acquia Drupal data will be stored in. It must exist on your server before Acquia Drupal can be installed.</div>
+</div>
+<div class="form-item form-type-textfield form-item-sqlsrv-username">
+  <label for="edit-sqlsrv-username">Database username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlsrv-username" name="sqlsrv[username]" value="" size="45" maxlength="128" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-sqlsrv-password">
+  <label for="edit-sqlsrv-password">Database password </label>
+ <input type="password" id="edit-sqlsrv-password" name="sqlsrv[password]" size="45" maxlength="128" class="form-text" />
+</div>
+<fieldset class="collapsible collapsed form-wrapper" id="edit-sqlsrv--2"><legend><span class="fieldset-legend">Advanced options</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">These options are only necessary for some sites. If you're not sure what you should enter here, leave the default settings or check with your hosting provider.</div><div class="form-item form-type-textfield form-item-sqlsrv-host">
+  <label for="edit-sqlsrv-host">Database host <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-sqlsrv-host" name="sqlsrv[host]" value="localhost" size="45" maxlength="255" class="form-text required" />
+<div class="description">If your database is located on a different server, change this.</div>
+</div>
+<div class="form-item form-type-textfield form-item-sqlsrv-port">
+  <label for="edit-sqlsrv-port">Database port </label>
+ <input type="text" id="edit-sqlsrv-port" name="sqlsrv[port]" value="" size="45" maxlength="5" class="form-text" />
+<div class="description">If your database server is listening to a non-standard port, enter its number.</div>
+</div>
+<div class="form-item form-type-textfield form-item-sqlsrv-db-prefix">
+  <label for="edit-sqlsrv-db-prefix">Table prefix </label>
+ <input type="text" id="edit-sqlsrv-db-prefix" name="sqlsrv[db_prefix]" value="" size="45" maxlength="128" class="form-text" />
+<div class="description">If more than one application will be sharing this database, enter a table prefix such as <em>acquia_</em> for your Acquia Drupal site here.</div>
+</div>
+</div></fieldset>
+</div><input type="hidden" name="form_build_id" value="form-24hp04vy_i4XVSX7Xul4gNk5lrlRAfJChDHygq4bhwM" />
+<input type="hidden" name="form_id" value="install_settings_form" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-save" name="op" value="Save and continue" class="form-submit" /></div></div></form>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:33] DWI: Step 1...
+[06:44:33] DWI: Database configuration page detected.
+[06:44:33] DWI: POST(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs). params:Array
+(
+    [driver] => mysql
+    [mysql[database]] => acquia_drupal
+    [mysql[username]] => drupaluser
+    [mysql[password]] => 
+    [mysql[host]] => 127.0.0.1
+    [mysql[port]] => 33066
+    [mysql[db_prefix]] => 
+    [sqlite[database]] => sites/default/files/.ht.sqlite
+    [sqlite[db_prefix]] => 
+    [sqlsrv[database]] => 
+    [sqlsrv[username]] => 
+    [sqlsrv[password]] => 
+    [sqlsrv[host]] => localhost
+    [sqlsrv[port]] => 
+    [sqlsrv[db_prefix]] => 
+    [form_build_id] => form-24hp04vy_i4XVSX7Xul4gNk5lrlRAfJChDHygq4bhwM
+    [form_id] => install_settings_form
+    [op] => Save and continue
+)
+
+[06:44:36] DWI: returned html:
+[06:44:36] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=do_nojs" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1, "themes\u002Fseven\u002Fie6.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 0%"></div></div><div class="percentage">0%</div><div class="message">Initializing.<br/>&nbsp;</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:36] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:38] DWI: returned html:
+[06:44:38] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=do_nojs" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie6.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 18%"></div></div><div class="percentage">18%</div><div class="message">Completed 6 of 33.<br />Installed <em>Field</em> module.</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:38] DWI: Step 2...
+[06:44:38] Are we done with the modules installation?....no
+
+[06:44:38] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:40] DWI: returned html:
+[06:44:40] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=do_nojs" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/field/theme/field.css?0");
+@import url("http://localhost:8082/modules/node/node.css?0");
+@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie6.css":1, "themes\u002Fseven\u002Fie7.css":1, "themes\u002Fseven\u002Fie.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 39%"></div></div><div class="percentage">39%</div><div class="message">Completed 13 of 33.<br />Installed <em>Help</em> module.</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:40] DWI: Step 3...
+[06:44:40] Are we done with the modules installation?....no
+
+[06:44:40] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:42] DWI: returned html:
+[06:44:42] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=do_nojs" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?0");
+@import url("http://localhost:8082/modules/field/theme/field.css?0");
+@import url("http://localhost:8082/modules/node/node.css?0");
+@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie6.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 55%"></div></div><div class="percentage">55%</div><div class="message">Completed 18 of 33.<br />Installed <em>Menu</em> module.</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:42] DWI: Step 4...
+[06:44:42] Are we done with the modules installation?....no
+
+[06:44:42] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:44] DWI: returned html:
+[06:44:44] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=do_nojs" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?0");
+@import url("http://localhost:8082/modules/field/theme/field.css?0");
+@import url("http://localhost:8082/modules/node/node.css?0");
+@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie6.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 70%"></div></div><div class="percentage">70%</div><div class="message">Completed 23 of 33.<br />Installed <em>Search</em> module.</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:44] DWI: Step 5...
+[06:44:44] Are we done with the modules installation?....no
+
+[06:44:44] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:46] DWI: returned html:
+[06:44:46] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=do_nojs" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?0");
+@import url("http://localhost:8082/modules/field/theme/field.css?0");
+@import url("http://localhost:8082/modules/node/node.css?0");
+@import url("http://localhost:8082/modules/search/search.css?0");
+@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fsearch\u002Fsearch.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie6.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 82%"></div></div><div class="percentage">82%</div><div class="message">Completed 27 of 33.<br />Installed <em>Field UI</em> module.</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:46] DWI: Step 6...
+[06:44:46] Are we done with the modules installation?....no
+
+[06:44:46] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=do_nojs)
+[06:44:48] DWI: returned html:
+[06:44:48] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Installing Acquia Drupal | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Refresh" content="0; URL=http://localhost:8082/install.php?profile=acquia&amp;locale=en&amp;id=1&amp;op=do_nojs&amp;id=1&amp;op=finished" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?0");
+@import url("http://localhost:8082/modules/system/system.messages.css?0");
+@import url("http://localhost:8082/modules/system/system.menus.css?0");
+@import url("http://localhost:8082/modules/system/system.base.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?0");
+@import url("http://localhost:8082/modules/field/theme/field.css?0");
+@import url("http://localhost:8082/modules/node/node.css?0");
+@import url("http://localhost:8082/modules/search/search.css?0");
+@import url("http://localhost:8082/modules/user/user.css?0");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?0");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?0");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?0");
+@import url("http://localhost:8082/themes/seven/style.css?0");</style>
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?0" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?0" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fsearch\u002Fsearch.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie6.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Installing Acquia Drupal</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/themes/seven/logo.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="active">Install profile<span class="element-invisible">(active)</span></li><li>Configure site</li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <div id="progress" class="progress"><div class="bar"><div class="filled" style="width: 100%"></div></div><div class="percentage">100%</div><div class="message">Completed 33 of 33.<br />Installed <em>Acquia Drupal</em> module.</div></div>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:48] DWI: Step 7...
+[06:44:48] Are we done with the modules installation?....yes
+
+[06:44:48] DWI: Loading op=finished page...
+[06:44:48] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en&id=1&op=finished)
+[06:44:50] DWI: returned html:
+[06:44:50] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>Welcome to Drupal | Drupal</title>
+  <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.base.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.menus.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.messages.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.theme.css?mh0leo");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?mh0leo");
+@import url("http://localhost:8082/modules/field/theme/field.css?mh0leo");
+@import url("http://localhost:8082/modules/node/node.css?mh0leo");
+@import url("http://localhost:8082/modules/search/search.css?mh0leo");
+@import url("http://localhost:8082/modules/user/user.css?mh0leo");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/themes/bartik/css/layout.css?mh0leo");
+@import url("http://localhost:8082/themes/bartik/css/style.css?mh0leo");
+@import url("http://localhost:8082/themes/bartik/css/colors.css?mh0leo");</style>
+<style type="text/css" media="print">@import url("http://localhost:8082/themes/bartik/css/print.css?mh0leo");</style>
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/bartik/css/ie.css?mh0leo" media="all" />
+<![endif]-->
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/bartik/css/ie6.css?mh0leo" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?mh0leo"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "ajaxPageState":{"theme":"bartik", "theme_token":"jJmMTqxccXmhPSjzLBd3YRFr_hKLoaQTkpHUs8-ZlwU", "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1}, "css":{"modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fsearch\u002Fsearch.css":1, "modules\u002Fuser\u002Fuser.css":1, "themes\u002Fbartik\u002Fcss\u002Flayout.css":1, "themes\u002Fbartik\u002Fcss\u002Fstyle.css":1, "themes\u002Fbartik\u002Fcss\u002Fcolors.css":1, "themes\u002Fbartik\u002Fcss\u002Fprint.css":1, "themes\u002Fbartik\u002Fcss\u002Fie.css":1, "themes\u002Fbartik\u002Fcss\u002Fie6.css":1}}});
+//--><!]]>
+</script>
+</head>
+<body class="html front not-logged-in one-sidebar sidebar-first page-node" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="page-wrapper"><div id="page">
+
+  <div id="header" class="without-secondary-menu"><div class="section clearfix">
+
+          <a href="/" title="Home" rel="home" id="logo">
+        <img src="http://localhost:8082/profiles/acquia/AcquiaDrupalLogoInstaller.png" alt="Home" />
+      </a>
+    
+          <div id="name-and-slogan">
+
+                              <div id="site-name">
+              <strong>
+                <a href="/" title="Home" rel="home"><span>Drupal</span></a>
+              </strong>
+            </div>
+                  
+        
+      </div> <!-- /#name-and-slogan -->
+    
+    
+          <div id="main-menu" class="navigation">
+        <h2 class="element-invisible">Main menu</h2><ul id="main-menu-links" class="links clearfix"><li class="menu-214 first last active"><a href="/" class="active">Home</a></li>
+</ul>      </div> <!-- /#main-menu -->
+    
+    
+  </div></div> <!-- /.section, /#header -->
+
+      <div id="messages"><div class="section clearfix">
+      <div class="messages error">
+<h2 class="element-invisible">Error message</h2>
+No active batch.</div>
+    </div></div> <!-- /.section, /#messages -->
+  
+  
+  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+
+    
+          <div id="sidebar-first" class="column sidebar"><div class="section">
+          <div class="region region-sidebar-first">
+    <div id="block-user-login" class="block block-user">
+
+    <h2>User login</h2>
+  
+  <div class="content">
+    <form action="/?q=node&amp;destination=node" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" />
+</div>
+<div class="item-list"><ul><li class="first"><a href="/?q=user/register" title="Create a new user account.">Create new account</a></li>
+<li class="last"><a href="/?q=user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-eJWAMptJ_psGDGFhpEQ20gu3j3uWSO6WeYTjdOp-Qhs" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Log in" class="form-submit" /></div></div></form>  </div>
+</div>
+  </div>
+      </div></div> <!-- /.section, /#sidebar-first -->
+    
+    <div id="content" class="column"><div class="section">
+            <a id="main-content"></a>
+                    <h1 class="title" id="page-title">
+          Welcome to Drupal        </h1>
+                          <div class="tabs">
+                  </div>
+                          <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="first-time"><p>No front page content has been created yet.</p></div>  </div>
+</div>
+  </div>
+      
+    </div></div> <!-- /.section, /#content -->
+
+    
+  </div></div> <!-- /#main, /#main-wrapper -->
+
+  
+  <div id="footer-wrapper"><div class="section">
+
+    
+          <div id="footer" class="clearfix">
+          <div class="region region-footer">
+    <div id="block-system-powered-by" class="block block-system">
+
+    
+  <div class="content">
+    <span>Powered by <a href="http://drupal.org">Drupal</a></span>  </div>
+</div>
+  </div>
+      </div> <!-- /#footer -->
+    
+  </div></div> <!-- /.section, /#footer-wrapper -->
+
+</div></div> <!-- /#page, /#page-wrapper -->
+  </body>
+</html>
+
+========================
+[06:44:50] DWI: Loading site configuration page...
+[06:44:50] DWI: GET(http://localhost:8082/install.php?profile=acquia&locale=en)
+[06:44:51] DWI: returned html:
+[06:44:51] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Configure site | Drupal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.messages.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.menus.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.base.css?mh0leo");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?mh0leo");
+@import url("http://localhost:8082/modules/field/theme/field.css?mh0leo");
+@import url("http://localhost:8082/modules/node/node.css?mh0leo");
+@import url("http://localhost:8082/modules/search/search.css?mh0leo");
+@import url("http://localhost:8082/modules/user/user.css?mh0leo");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?mh0leo");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?mh0leo");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?mh0leo");
+@import url("http://localhost:8082/themes/seven/style.css?mh0leo");</style>
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?mh0leo" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?mh0leo" media="all" />
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?mh0leo" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?mh0leo"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/form.js?v=7.19"></script>
+<script type="text/javascript" src="http://localhost:8082/modules/system/system.js?mh0leo"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/timezone.js?mh0leo"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(function () { Drupal.cleanURLsInstallCheck(); });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(function () { Drupal.hideEmailAdministratorCheckbox() });
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://localhost:8082/modules/user/user.js?mh0leo"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "copyFieldValue":{"edit-site-mail":[ "edit-account-mail" ]}, "password":{"strengthTitle":"Password strength:", "hasWeaknesses":"To make your password stronger:", "tooShort":"Make it at least 6 characters", "addLowerCase":"Add lowercase letters", "addUpperCase":"Add uppercase letters", "addNumbers":"Add numbers", "addPunctuation":"Add punctuation", "sameAsUsername":"Make it different from your username", "confirmSuccess":"yes", "confirmFailure":"no", "weak":"Weak", "fair":"Fair", "good":"Good", "strong":"Strong", "confirmTitle":"Passwords match:", "username":""}, "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fsearch\u002Fsearch.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1, "themes\u002Fseven\u002Fie6.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1, "misc\u002Fform.js":1, "modules\u002Fsystem\u002Fsystem.js":1, "misc\u002Ftimezone.js":1, "0":1, "1":1, "modules\u002Fuser\u002Fuser.js":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Configure site</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/profiles/acquia/AcquiaDrupalLogoInstaller.png" alt="Drupal" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="done">Install profile<span class="element-invisible">(done)</span></li><li class="active">Configure site<span class="element-invisible">(active)</span></li><li>Finished</li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <form action="/install.php?profile=acquia&amp;locale=en" method="post" id="install-configure-form" accept-charset="UTF-8"><div><fieldset class="form-wrapper" id="edit-site-information"><legend><span class="fieldset-legend">Site information</span></legend><div class="fieldset-wrapper"><div class="form-item form-type-textfield form-item-site-name">
+  <label for="edit-site-name">Site name <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-site-name" name="site_name" value="localhost" size="60" maxlength="128" class="form-text required" />
+</div>
+<div class="form-item form-type-textfield form-item-site-mail">
+  <label for="edit-site-mail">Site e-mail address <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-site-mail" name="site_mail" value="" size="60" maxlength="128" class="form-text required" />
+<div class="description">Automated e-mails, such as registration information, will be sent from this address. Use an address ending in your site's domain to help prevent these e-mails from being flagged as spam.</div>
+</div>
+<div class="form-item form-type-textfield form-item-acquia-identifier">
+  <label for="edit-acquia-identifier">Acquia subscription identifier </label>
+ <input type="text" id="edit-acquia-identifier" name="acquia_identifier" value="" size="60" maxlength="128" class="form-text" />
+<div class="description">If you have an <a href="http://network.acquia.com/network/dashboard/subscription">Acquia Network subscription</a>, please enter the subscription identifier. You can also provide it later at Administer > Configuration > Acquia Network settings.</div>
+</div>
+<div class="form-item form-type-textfield form-item-acquia-key">
+  <label for="edit-acquia-key">Acquia subscription key </label>
+ <input type="text" id="edit-acquia-key" name="acquia_key" value="" size="60" maxlength="128" class="form-text" />
+<div class="description">If you have an <a href="http://network.acquia.com/network/dashboard/subscription">Acquia Network subscription</a>, please enter the subscription key. You can also provide it later at Administer > Configuration > Acquia Network settings.</div>
+</div>
+</div></fieldset>
+<fieldset class="form-wrapper" id="edit-admin-account"><legend><span class="fieldset-legend">Site maintenance account</span></legend><div class="fieldset-wrapper"><div class="form-item form-type-textfield form-item-account-name">
+  <label for="edit-account-name">Username <span class="form-required" title="This field is required.">*</span></label>
+ <input class="username form-text required" type="text" id="edit-account-name" name="account[name]" value="" size="60" maxlength="60" />
+<div class="description">Spaces are allowed; punctuation is not allowed except for periods, hyphens, and underscores.</div>
+</div>
+<div class="form-item form-type-textfield form-item-account-mail">
+  <label for="edit-account-mail">E-mail address <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-account-mail" name="account[mail]" value="" size="60" maxlength="254" class="form-text required" />
+</div>
+<div class="form-item form-type-password-confirm form-item-account-pass">
+ <div class="form-item form-type-password form-item-account-pass-pass1">
+  <label for="edit-account-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input class="password-field form-text required" type="password" id="edit-account-pass-pass1" name="account[pass][pass1]" size="25" maxlength="128" />
+</div>
+<div class="form-item form-type-password form-item-account-pass-pass2">
+  <label for="edit-account-pass-pass2">Confirm password <span class="form-required" title="This field is required.">*</span></label>
+ <input class="password-confirm form-text required" type="password" id="edit-account-pass-pass2" name="account[pass][pass2]" size="25" maxlength="128" />
+</div>
+
+</div>
+</div></fieldset>
+<fieldset class="form-wrapper" id="edit-server-settings"><legend><span class="fieldset-legend">Server settings</span></legend><div class="fieldset-wrapper"><div class="form-item form-type-select form-item-site-default-country">
+  <label for="edit-site-default-country">Default country </label>
+ <select id="edit-site-default-country" name="site_default_country" class="form-select"><option value="" selected="selected">- None -</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="VG">British Virgin Islands</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo (Brazzaville)</option><option value="CD">Congo (Kinshasa)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curaçao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong S.A.R., China</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao S.A.R., China</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="KP">North Korea</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestinian Territory</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="KR">South Korea</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="VI">U.S. Virgin Islands</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UM">United States Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select>
+<div class="description">Select the default country for the site.</div>
+</div>
+<input id="edit-clean-url" class="install" type="hidden" name="clean_url" value="0" />
+<div class="form-item form-type-select form-item-date-default-timezone">
+  <label for="edit-date-default-timezone">Default time zone </label>
+ <select class="timezone-detect form-select" id="edit-date-default-timezone" name="date_default_timezone"><option value="Africa/Abidjan">Africa/Abidjan: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Accra">Africa/Accra: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Addis_Ababa">Africa/Addis Ababa: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Algiers">Africa/Algiers: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Asmara">Africa/Asmara: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Asmera">Africa/Asmera: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Bamako">Africa/Bamako: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Bangui">Africa/Bangui: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Banjul">Africa/Banjul: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Bissau">Africa/Bissau: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Blantyre">Africa/Blantyre: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Brazzaville">Africa/Brazzaville: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Bujumbura">Africa/Bujumbura: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Cairo">Africa/Cairo: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Casablanca">Africa/Casablanca: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Ceuta">Africa/Ceuta: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Conakry">Africa/Conakry: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Dakar">Africa/Dakar: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Dar_es_Salaam">Africa/Dar es Salaam: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Djibouti">Africa/Djibouti: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Douala">Africa/Douala: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/El_Aaiun">Africa/El Aaiun: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Freetown">Africa/Freetown: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Gaborone">Africa/Gaborone: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Harare">Africa/Harare: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Johannesburg">Africa/Johannesburg: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Kampala">Africa/Kampala: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Khartoum">Africa/Khartoum: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Kigali">Africa/Kigali: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Kinshasa">Africa/Kinshasa: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Lagos">Africa/Lagos: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Libreville">Africa/Libreville: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Lome">Africa/Lome: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Luanda">Africa/Luanda: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Lubumbashi">Africa/Lubumbashi: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Lusaka">Africa/Lusaka: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Malabo">Africa/Malabo: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Maputo">Africa/Maputo: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Maseru">Africa/Maseru: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Mbabane">Africa/Mbabane: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Mogadishu">Africa/Mogadishu: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Monrovia">Africa/Monrovia: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Nairobi">Africa/Nairobi: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Africa/Ndjamena">Africa/Ndjamena: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Niamey">Africa/Niamey: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Nouakchott">Africa/Nouakchott: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Ouagadougou">Africa/Ouagadougou: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Porto-Novo">Africa/Porto-Novo: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Sao_Tome">Africa/Sao Tome: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Timbuktu">Africa/Timbuktu: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Africa/Tripoli">Africa/Tripoli: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Africa/Tunis">Africa/Tunis: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Africa/Windhoek">Africa/Windhoek: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="America/Adak">America/Adak: Monday, January 21, 2013 - 20:44 -1000</option><option value="America/Anchorage">America/Anchorage: Monday, January 21, 2013 - 21:44 -0900</option><option value="America/Anguilla">America/Anguilla: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Antigua">America/Antigua: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Araguaina">America/Araguaina: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Buenos_Aires">America/Argentina/Buenos Aires: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Catamarca">America/Argentina/Catamarca: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/ComodRivadavia">America/Argentina/ComodRivadavia: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Cordoba">America/Argentina/Cordoba: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Jujuy">America/Argentina/Jujuy: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/La_Rioja">America/Argentina/La Rioja: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Mendoza">America/Argentina/Mendoza: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Rio_Gallegos">America/Argentina/Rio Gallegos: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Salta">America/Argentina/Salta: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/San_Juan">America/Argentina/San Juan: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/San_Luis">America/Argentina/San Luis: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Tucuman">America/Argentina/Tucuman: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Argentina/Ushuaia">America/Argentina/Ushuaia: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Aruba">America/Aruba: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Asuncion">America/Asuncion: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Atikokan">America/Atikokan: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Atka">America/Atka: Monday, January 21, 2013 - 20:44 -1000</option><option value="America/Bahia">America/Bahia: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Barbados">America/Barbados: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Belem">America/Belem: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Belize">America/Belize: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Blanc-Sablon">America/Blanc-Sablon: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Boa_Vista">America/Boa Vista: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Bogota">America/Bogota: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Boise">America/Boise: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Buenos_Aires">America/Buenos Aires: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Cambridge_Bay">America/Cambridge Bay: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Campo_Grande">America/Campo Grande: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Cancun">America/Cancun: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Caracas">America/Caracas: Tuesday, January 22, 2013 - 02:14 -0430</option><option value="America/Catamarca">America/Catamarca: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Cayenne">America/Cayenne: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Cayman">America/Cayman: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Chicago">America/Chicago: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Chihuahua">America/Chihuahua: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Coral_Harbour">America/Coral Harbour: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Cordoba">America/Cordoba: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Costa_Rica">America/Costa Rica: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Cuiaba">America/Cuiaba: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Curacao">America/Curacao: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Danmarkshavn">America/Danmarkshavn: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="America/Dawson_Creek">America/Dawson Creek: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Dawson">America/Dawson: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Denver">America/Denver: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Detroit">America/Detroit: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Dominica">America/Dominica: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Edmonton">America/Edmonton: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Eirunepe">America/Eirunepe: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/El_Salvador">America/El Salvador: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Ensenada">America/Ensenada: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Fort_Wayne">America/Fort Wayne: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Fortaleza">America/Fortaleza: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Glace_Bay">America/Glace Bay: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Godthab">America/Godthab: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Goose_Bay">America/Goose Bay: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Grand_Turk">America/Grand Turk: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Grenada">America/Grenada: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Guadeloupe">America/Guadeloupe: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Guatemala">America/Guatemala: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Guayaquil">America/Guayaquil: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Guyana">America/Guyana: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Halifax">America/Halifax: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Havana">America/Havana: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Hermosillo">America/Hermosillo: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Indiana/Indianapolis">America/Indiana/Indianapolis: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Indiana/Knox">America/Indiana/Knox: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Indiana/Marengo">America/Indiana/Marengo: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Indiana/Petersburg">America/Indiana/Petersburg: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Indiana/Tell_City">America/Indiana/Tell City: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Indiana/Vevay">America/Indiana/Vevay: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Indiana/Vincennes">America/Indiana/Vincennes: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Indiana/Winamac">America/Indiana/Winamac: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Indianapolis">America/Indianapolis: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Inuvik">America/Inuvik: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Iqaluit">America/Iqaluit: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Jamaica">America/Jamaica: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Jujuy">America/Jujuy: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Juneau">America/Juneau: Monday, January 21, 2013 - 21:44 -0900</option><option value="America/Kentucky/Louisville">America/Kentucky/Louisville: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Kentucky/Monticello">America/Kentucky/Monticello: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Knox_IN">America/Knox IN: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/La_Paz">America/La Paz: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Lima">America/Lima: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Los_Angeles">America/Los Angeles: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Louisville">America/Louisville: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Maceio">America/Maceio: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Managua">America/Managua: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Manaus">America/Manaus: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Marigot">America/Marigot: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Martinique">America/Martinique: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Matamoros">America/Matamoros: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Mazatlan">America/Mazatlan: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Mendoza">America/Mendoza: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Menominee">America/Menominee: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Merida">America/Merida: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Mexico_City">America/Mexico City: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Miquelon">America/Miquelon: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Moncton">America/Moncton: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Monterrey">America/Monterrey: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Montevideo">America/Montevideo: Tuesday, January 22, 2013 - 04:44 -0200</option><option value="America/Montreal">America/Montreal: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Montserrat">America/Montserrat: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Nassau">America/Nassau: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/New_York">America/New York: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Nipigon">America/Nipigon: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Nome">America/Nome: Monday, January 21, 2013 - 21:44 -0900</option><option value="America/Noronha">America/Noronha: Tuesday, January 22, 2013 - 04:44 -0200</option><option value="America/North_Dakota/Center">America/North Dakota/Center: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/North_Dakota/New_Salem">America/North Dakota/New Salem: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Ojinaga">America/Ojinaga: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Panama">America/Panama: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Pangnirtung">America/Pangnirtung: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Paramaribo">America/Paramaribo: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Phoenix">America/Phoenix: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/Port_of_Spain">America/Port of Spain: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Port-au-Prince">America/Port-au-Prince: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Porto_Acre">America/Porto Acre: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Porto_Velho">America/Porto Velho: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Puerto_Rico">America/Puerto Rico: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Rainy_River">America/Rainy River: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Rankin_Inlet">America/Rankin Inlet: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Recife">America/Recife: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Regina">America/Regina: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Resolute">America/Resolute: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Rio_Branco">America/Rio Branco: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Rosario">America/Rosario: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Santa_Isabel">America/Santa Isabel: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Santarem">America/Santarem: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Santiago">America/Santiago: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="America/Santo_Domingo">America/Santo Domingo: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Sao_Paulo">America/Sao Paulo: Tuesday, January 22, 2013 - 04:44 -0200</option><option value="America/Scoresbysund">America/Scoresbysund: Tuesday, January 22, 2013 - 05:44 -0100</option><option value="America/Shiprock">America/Shiprock: Monday, January 21, 2013 - 23:44 -0700</option><option value="America/St_Barthelemy">America/St Barthelemy: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/St_Johns">America/St Johns: Tuesday, January 22, 2013 - 03:14 -0330</option><option value="America/St_Kitts">America/St Kitts: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/St_Lucia">America/St Lucia: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/St_Thomas">America/St Thomas: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/St_Vincent">America/St Vincent: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Swift_Current">America/Swift Current: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Tegucigalpa">America/Tegucigalpa: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Thule">America/Thule: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Thunder_Bay">America/Thunder Bay: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Tijuana">America/Tijuana: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Toronto">America/Toronto: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="America/Tortola">America/Tortola: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Vancouver">America/Vancouver: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Virgin">America/Virgin: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="America/Whitehorse">America/Whitehorse: Monday, January 21, 2013 - 22:44 -0800</option><option value="America/Winnipeg">America/Winnipeg: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="America/Yakutat">America/Yakutat: Monday, January 21, 2013 - 21:44 -0900</option><option value="America/Yellowknife">America/Yellowknife: Monday, January 21, 2013 - 23:44 -0700</option><option value="Antarctica/Casey">Antarctica/Casey: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Antarctica/Davis">Antarctica/Davis: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Antarctica/DumontDUrville">Antarctica/DumontDUrville: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Antarctica/Macquarie">Antarctica/Macquarie: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Antarctica/Mawson">Antarctica/Mawson: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Antarctica/McMurdo">Antarctica/McMurdo: Tuesday, January 22, 2013 - 19:44 +1300</option><option value="Antarctica/Palmer">Antarctica/Palmer: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="Antarctica/Rothera">Antarctica/Rothera: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="Antarctica/South_Pole">Antarctica/South Pole: Tuesday, January 22, 2013 - 19:44 +1300</option><option value="Antarctica/Syowa">Antarctica/Syowa: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Antarctica/Vostok">Antarctica/Vostok: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Arctic/Longyearbyen">Arctic/Longyearbyen: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Asia/Aden">Asia/Aden: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Asia/Almaty">Asia/Almaty: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Amman">Asia/Amman: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Anadyr">Asia/Anadyr: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Asia/Aqtau">Asia/Aqtau: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Aqtobe">Asia/Aqtobe: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Ashgabat">Asia/Ashgabat: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Ashkhabad">Asia/Ashkhabad: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Baghdad">Asia/Baghdad: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Asia/Bahrain">Asia/Bahrain: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Asia/Baku">Asia/Baku: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Asia/Bangkok">Asia/Bangkok: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Beirut">Asia/Beirut: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Bishkek">Asia/Bishkek: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Brunei">Asia/Brunei: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Calcutta">Asia/Calcutta: Tuesday, January 22, 2013 - 12:14 +0530</option><option value="Asia/Choibalsan">Asia/Choibalsan: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Chongqing">Asia/Chongqing: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Chungking">Asia/Chungking: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Colombo">Asia/Colombo: Tuesday, January 22, 2013 - 12:14 +0530</option><option value="Asia/Dacca">Asia/Dacca: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Damascus">Asia/Damascus: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Dhaka">Asia/Dhaka: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Dili">Asia/Dili: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Asia/Dubai">Asia/Dubai: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Asia/Dushanbe">Asia/Dushanbe: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Gaza">Asia/Gaza: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Harbin">Asia/Harbin: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Ho_Chi_Minh">Asia/Ho Chi Minh: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Hong_Kong">Asia/Hong Kong: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Hovd">Asia/Hovd: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Irkutsk">Asia/Irkutsk: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Istanbul">Asia/Istanbul: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Jakarta">Asia/Jakarta: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Jayapura">Asia/Jayapura: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Asia/Jerusalem">Asia/Jerusalem: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Kabul">Asia/Kabul: Tuesday, January 22, 2013 - 11:14 +0430</option><option value="Asia/Kamchatka">Asia/Kamchatka: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Asia/Karachi">Asia/Karachi: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Kashgar">Asia/Kashgar: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Kathmandu">Asia/Kathmandu: Tuesday, January 22, 2013 - 12:29 +0545</option><option value="Asia/Katmandu">Asia/Katmandu: Tuesday, January 22, 2013 - 12:29 +0545</option><option value="Asia/Kolkata">Asia/Kolkata: Tuesday, January 22, 2013 - 12:14 +0530</option><option value="Asia/Krasnoyarsk">Asia/Krasnoyarsk: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Kuala_Lumpur">Asia/Kuala Lumpur: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Kuching">Asia/Kuching: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Kuwait">Asia/Kuwait: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Asia/Macao">Asia/Macao: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Macau">Asia/Macau: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Magadan">Asia/Magadan: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Asia/Makassar">Asia/Makassar: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Manila">Asia/Manila: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Muscat">Asia/Muscat: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Asia/Nicosia">Asia/Nicosia: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Novokuznetsk">Asia/Novokuznetsk: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Novosibirsk">Asia/Novosibirsk: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Omsk">Asia/Omsk: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Oral">Asia/Oral: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Phnom_Penh">Asia/Phnom Penh: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Pontianak">Asia/Pontianak: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Pyongyang">Asia/Pyongyang: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Asia/Qatar">Asia/Qatar: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Asia/Qyzylorda">Asia/Qyzylorda: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Rangoon">Asia/Rangoon: Tuesday, January 22, 2013 - 13:14 +0630</option><option value="Asia/Riyadh">Asia/Riyadh: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Asia/Saigon">Asia/Saigon: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Sakhalin">Asia/Sakhalin: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Asia/Samarkand">Asia/Samarkand: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Seoul">Asia/Seoul: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Asia/Shanghai">Asia/Shanghai: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Singapore">Asia/Singapore: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Taipei">Asia/Taipei: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Tashkent">Asia/Tashkent: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Tbilisi">Asia/Tbilisi: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Asia/Tehran">Asia/Tehran: Tuesday, January 22, 2013 - 10:14 +0330</option><option value="Asia/Tel_Aviv">Asia/Tel Aviv: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Asia/Thimbu">Asia/Thimbu: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Thimphu">Asia/Thimphu: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Asia/Tokyo">Asia/Tokyo: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Asia/Ujung_Pandang">Asia/Ujung Pandang: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Ulaanbaatar">Asia/Ulaanbaatar: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Ulan_Bator">Asia/Ulan Bator: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Urumqi">Asia/Urumqi: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Asia/Vientiane">Asia/Vientiane: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Asia/Vladivostok">Asia/Vladivostok: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Asia/Yakutsk">Asia/Yakutsk: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Asia/Yekaterinburg">Asia/Yekaterinburg: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Asia/Yerevan">Asia/Yerevan: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Atlantic/Azores">Atlantic/Azores: Tuesday, January 22, 2013 - 05:44 -0100</option><option value="Atlantic/Bermuda">Atlantic/Bermuda: Tuesday, January 22, 2013 - 02:44 -0400</option><option value="Atlantic/Canary">Atlantic/Canary: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Atlantic/Cape_Verde">Atlantic/Cape Verde: Tuesday, January 22, 2013 - 05:44 -0100</option><option value="Atlantic/Faeroe">Atlantic/Faeroe: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Atlantic/Faroe">Atlantic/Faroe: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Atlantic/Jan_Mayen">Atlantic/Jan Mayen: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Atlantic/Madeira">Atlantic/Madeira: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Atlantic/Reykjavik">Atlantic/Reykjavik: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Atlantic/South_Georgia">Atlantic/South Georgia: Tuesday, January 22, 2013 - 04:44 -0200</option><option value="Atlantic/St_Helena">Atlantic/St Helena: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Atlantic/Stanley">Atlantic/Stanley: Tuesday, January 22, 2013 - 03:44 -0300</option><option value="Australia/ACT">Australia/ACT: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Adelaide">Australia/Adelaide: Tuesday, January 22, 2013 - 17:14 +1030</option><option value="Australia/Brisbane">Australia/Brisbane: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Australia/Broken_Hill">Australia/Broken Hill: Tuesday, January 22, 2013 - 17:14 +1030</option><option value="Australia/Canberra">Australia/Canberra: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Currie">Australia/Currie: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Darwin">Australia/Darwin: Tuesday, January 22, 2013 - 16:14 +0930</option><option value="Australia/Eucla">Australia/Eucla: Tuesday, January 22, 2013 - 15:29 +0845</option><option value="Australia/Hobart">Australia/Hobart: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/LHI">Australia/LHI: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Lindeman">Australia/Lindeman: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Australia/Lord_Howe">Australia/Lord Howe: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Melbourne">Australia/Melbourne: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/NSW">Australia/NSW: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/North">Australia/North: Tuesday, January 22, 2013 - 16:14 +0930</option><option value="Australia/Perth">Australia/Perth: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Australia/Queensland">Australia/Queensland: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Australia/South">Australia/South: Tuesday, January 22, 2013 - 17:14 +1030</option><option value="Australia/Sydney">Australia/Sydney: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Tasmania">Australia/Tasmania: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/Victoria">Australia/Victoria: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Australia/West">Australia/West: Tuesday, January 22, 2013 - 14:44 +0800</option><option value="Australia/Yancowinna">Australia/Yancowinna: Tuesday, January 22, 2013 - 17:14 +1030</option><option value="Europe/Amsterdam">Europe/Amsterdam: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Andorra">Europe/Andorra: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Athens">Europe/Athens: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Belfast">Europe/Belfast: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Belgrade">Europe/Belgrade: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Berlin">Europe/Berlin: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Bratislava">Europe/Bratislava: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Brussels">Europe/Brussels: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Bucharest">Europe/Bucharest: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Budapest">Europe/Budapest: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Chisinau">Europe/Chisinau: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Copenhagen">Europe/Copenhagen: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Dublin">Europe/Dublin: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Gibraltar">Europe/Gibraltar: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Guernsey">Europe/Guernsey: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Helsinki">Europe/Helsinki: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Isle_of_Man">Europe/Isle of Man: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Istanbul">Europe/Istanbul: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Jersey">Europe/Jersey: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Kaliningrad">Europe/Kaliningrad: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Kiev">Europe/Kiev: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Lisbon">Europe/Lisbon: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Ljubljana">Europe/Ljubljana: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/London">Europe/London: Tuesday, January 22, 2013 - 06:44 +0000</option><option value="Europe/Luxembourg">Europe/Luxembourg: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Madrid">Europe/Madrid: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Malta">Europe/Malta: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Mariehamn">Europe/Mariehamn: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Minsk">Europe/Minsk: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Monaco">Europe/Monaco: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Moscow">Europe/Moscow: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Europe/Nicosia">Europe/Nicosia: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Oslo">Europe/Oslo: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Paris">Europe/Paris: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Podgorica">Europe/Podgorica: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Prague">Europe/Prague: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Riga">Europe/Riga: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Rome">Europe/Rome: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Samara">Europe/Samara: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Europe/San_Marino">Europe/San Marino: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Sarajevo">Europe/Sarajevo: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Simferopol">Europe/Simferopol: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Skopje">Europe/Skopje: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Sofia">Europe/Sofia: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Stockholm">Europe/Stockholm: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Tallinn">Europe/Tallinn: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Tirane">Europe/Tirane: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Tiraspol">Europe/Tiraspol: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Uzhgorod">Europe/Uzhgorod: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Vaduz">Europe/Vaduz: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Vatican">Europe/Vatican: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Vienna">Europe/Vienna: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Vilnius">Europe/Vilnius: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Volgograd">Europe/Volgograd: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Europe/Warsaw">Europe/Warsaw: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Zagreb">Europe/Zagreb: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Europe/Zaporozhye">Europe/Zaporozhye: Tuesday, January 22, 2013 - 08:44 +0200</option><option value="Europe/Zurich">Europe/Zurich: Tuesday, January 22, 2013 - 07:44 +0100</option><option value="Indian/Antananarivo">Indian/Antananarivo: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Indian/Chagos">Indian/Chagos: Tuesday, January 22, 2013 - 12:44 +0600</option><option value="Indian/Christmas">Indian/Christmas: Tuesday, January 22, 2013 - 13:44 +0700</option><option value="Indian/Cocos">Indian/Cocos: Tuesday, January 22, 2013 - 13:14 +0630</option><option value="Indian/Comoro">Indian/Comoro: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Indian/Kerguelen">Indian/Kerguelen: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Indian/Mahe">Indian/Mahe: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Indian/Maldives">Indian/Maldives: Tuesday, January 22, 2013 - 11:44 +0500</option><option value="Indian/Mauritius">Indian/Mauritius: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Indian/Mayotte">Indian/Mayotte: Tuesday, January 22, 2013 - 09:44 +0300</option><option value="Indian/Reunion">Indian/Reunion: Tuesday, January 22, 2013 - 10:44 +0400</option><option value="Pacific/Apia">Pacific/Apia: Monday, January 21, 2013 - 19:44 -1100</option><option value="Pacific/Auckland">Pacific/Auckland: Tuesday, January 22, 2013 - 19:44 +1300</option><option value="Pacific/Chatham">Pacific/Chatham: Tuesday, January 22, 2013 - 20:29 +1345</option><option value="Pacific/Easter">Pacific/Easter: Tuesday, January 22, 2013 - 01:44 -0500</option><option value="Pacific/Efate">Pacific/Efate: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Pacific/Enderbury">Pacific/Enderbury: Tuesday, January 22, 2013 - 19:44 +1300</option><option value="Pacific/Fakaofo">Pacific/Fakaofo: Monday, January 21, 2013 - 20:44 -1000</option><option value="Pacific/Fiji">Pacific/Fiji: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Funafuti">Pacific/Funafuti: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Galapagos">Pacific/Galapagos: Tuesday, January 22, 2013 - 00:44 -0600</option><option value="Pacific/Gambier">Pacific/Gambier: Monday, January 21, 2013 - 21:44 -0900</option><option value="Pacific/Guadalcanal">Pacific/Guadalcanal: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Pacific/Guam">Pacific/Guam: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Pacific/Honolulu">Pacific/Honolulu: Monday, January 21, 2013 - 20:44 -1000</option><option value="Pacific/Johnston">Pacific/Johnston: Monday, January 21, 2013 - 20:44 -1000</option><option value="Pacific/Kiritimati">Pacific/Kiritimati: Tuesday, January 22, 2013 - 20:44 +1400</option><option value="Pacific/Kosrae">Pacific/Kosrae: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Pacific/Kwajalein">Pacific/Kwajalein: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Majuro">Pacific/Majuro: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Marquesas">Pacific/Marquesas: Monday, January 21, 2013 - 21:14 -0930</option><option value="Pacific/Midway">Pacific/Midway: Monday, January 21, 2013 - 19:44 -1100</option><option value="Pacific/Nauru">Pacific/Nauru: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Niue">Pacific/Niue: Monday, January 21, 2013 - 19:44 -1100</option><option value="Pacific/Norfolk">Pacific/Norfolk: Tuesday, January 22, 2013 - 18:14 +1130</option><option value="Pacific/Noumea">Pacific/Noumea: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Pacific/Pago_Pago">Pacific/Pago Pago: Monday, January 21, 2013 - 19:44 -1100</option><option value="Pacific/Palau">Pacific/Palau: Tuesday, January 22, 2013 - 15:44 +0900</option><option value="Pacific/Pitcairn">Pacific/Pitcairn: Monday, January 21, 2013 - 22:44 -0800</option><option value="Pacific/Ponape">Pacific/Ponape: Tuesday, January 22, 2013 - 17:44 +1100</option><option value="Pacific/Port_Moresby">Pacific/Port Moresby: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Pacific/Rarotonga">Pacific/Rarotonga: Monday, January 21, 2013 - 20:44 -1000</option><option value="Pacific/Saipan">Pacific/Saipan: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Pacific/Samoa">Pacific/Samoa: Monday, January 21, 2013 - 19:44 -1100</option><option value="Pacific/Tahiti">Pacific/Tahiti: Monday, January 21, 2013 - 20:44 -1000</option><option value="Pacific/Tarawa">Pacific/Tarawa: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Tongatapu">Pacific/Tongatapu: Tuesday, January 22, 2013 - 19:44 +1300</option><option value="Pacific/Truk">Pacific/Truk: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="Pacific/Wake">Pacific/Wake: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Wallis">Pacific/Wallis: Tuesday, January 22, 2013 - 18:44 +1200</option><option value="Pacific/Yap">Pacific/Yap: Tuesday, January 22, 2013 - 16:44 +1000</option><option value="UTC" selected="selected">UTC: Tuesday, January 22, 2013 - 06:44 +0000</option></select>
+<div class="description">By default, dates in this site will be displayed in the chosen time zone.</div>
+</div>
+</div></fieldset>
+<fieldset class="form-wrapper" id="edit-update-notifications"><legend><span class="fieldset-legend">Update notifications</span></legend><div class="fieldset-wrapper"><div class="form-item form-type-checkboxes form-item-update-status-module">
+ <div id="edit-update-status-module" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-update-status-module-1">
+ <input type="checkbox" id="edit-update-status-module-1" name="update_status_module[1]" value="1" checked="checked" class="form-checkbox" />  <label class="option" for="edit-update-status-module-1">Check for updates automatically </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-update-status-module-2">
+ <input type="checkbox" id="edit-update-status-module-2" name="update_status_module[2]" value="2" checked="checked" class="form-checkbox" />  <label class="option" for="edit-update-status-module-2">Receive e-mail notifications </label>
+
+</div>
+</div>
+<div class="description">The system will notify you when updates and important security releases are available for installed components. Anonymous information about your site is sent to <a href="http://drupal.org">Drupal.org</a>.</div>
+</div>
+</div></fieldset>
+<input type="hidden" name="form_build_id" value="form-CXNZ90R3V6bVSnH2hMM8NVoaTT_wAHHXcIxxJkQLvto" />
+<input type="hidden" name="form_id" value="install_configure_form" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save and continue" class="form-submit" /></div></div></form>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:51] DWI: Found install-configure-form form
+[06:44:51] DWI: POST(http://localhost:8082/install.php?profile=acquia&locale=en&zxc). params:Array
+(
+    [site_name] => My Acquia Drupal Site
+    [site_mail] => info@onlineedge.ca
+    [account[name]] => Chris Nicolson
+    [account[mail]] => info@onlineedge.ca
+    [account[pass][pass1]] => Summer0987
+    [account[pass][pass2]] => Summer0987
+    [clean_url] => 1
+    [acquia_identifier] => 
+    [acquia_key] => 
+    [site_default_country] => 
+    [date_default_timezone] => UTC
+    [update_status_module[1]] => 1
+    [update_status_module[2]] => 2
+    [form_build_id] => form-CXNZ90R3V6bVSnH2hMM8NVoaTT_wAHHXcIxxJkQLvto
+    [form_id] => install_configure_form
+    [op] => Save and continue
+)
+
+[06:44:54] DWI: returned html:
+[06:44:54] ========================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <title>Acquia Drupal installation complete | My Acquia Drupal Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://localhost:8082/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.theme.css?mh0ler");
+@import url("http://localhost:8082/modules/system/system.messages.css?mh0ler");
+@import url("http://localhost:8082/modules/system/system.menus.css?mh0ler");
+@import url("http://localhost:8082/modules/system/system.base.css?mh0ler");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/comment/comment.css?mh0ler");
+@import url("http://localhost:8082/modules/field/theme/field.css?mh0ler");
+@import url("http://localhost:8082/modules/node/node.css?mh0ler");
+@import url("http://localhost:8082/modules/search/search.css?mh0ler");
+@import url("http://localhost:8082/modules/user/user.css?mh0ler");</style>
+<style type="text/css" media="all">@import url("http://localhost:8082/modules/system/system.admin.css?mh0ler");
+@import url("http://localhost:8082/modules/system/system.maintenance.css?mh0ler");</style>
+<style type="text/css" media="screen">@import url("http://localhost:8082/themes/seven/reset.css?mh0ler");
+@import url("http://localhost:8082/themes/seven/style.css?mh0ler");</style>
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie.css?mh0ler" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie7.css?mh0ler" media="all" />
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="http://localhost:8082/themes/seven/ie6.css?mh0ler" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="http://localhost:8082/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/drupal.js?mh0ler"></script>
+<script type="text/javascript" src="http://localhost:8082/modules/system/system.js?mh0ler"></script>
+<script type="text/javascript" src="http://localhost:8082/misc/timezone.js?mh0ler"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(function () { Drupal.cleanURLsInstallCheck(); });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(function () { Drupal.hideEmailAdministratorCheckbox() });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\u002F", "pathPrefix":"", "copyFieldValue":{"edit-site-mail":[ "edit-account-mail" ]}, "ajaxPageState":{"css":{"modules\u002Fsystem\u002Fsystem.theme.css":1, "modules\u002Fsystem\u002Fsystem.messages.css":1, "modules\u002Fsystem\u002Fsystem.menus.css":1, "modules\u002Fsystem\u002Fsystem.base.css":1, "modules\u002Fcomment\u002Fcomment.css":1, "modules\u002Ffield\u002Ftheme\u002Ffield.css":1, "modules\u002Fnode\u002Fnode.css":1, "modules\u002Fsearch\u002Fsearch.css":1, "modules\u002Fuser\u002Fuser.css":1, "modules\u002Fsystem\u002Fsystem.admin.css":1, "modules\u002Fsystem\u002Fsystem.maintenance.css":1, "themes\u002Fseven\u002Freset.css":1, "themes\u002Fseven\u002Fstyle.css":1, "themes\u002Fseven\u002Fie.css":1, "themes\u002Fseven\u002Fie7.css":1, "themes\u002Fseven\u002Fie6.css":1}, "js":{"misc\u002Fjquery.js":1, "misc\u002Fjquery.once.js":1, "misc\u002Fdrupal.js":1, "modules\u002Fsystem\u002Fsystem.js":1, "misc\u002Ftimezone.js":1, "0":1, "1":1}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="maintenance-page in-maintenance db-offline one-sidebar sidebar-first">
+
+  
+  <div id="branding">
+    <h1 class="page-title">Acquia Drupal installation complete</h1>  </div>
+
+  <div id="page">
+
+          <div id="sidebar-first" class="sidebar">
+                  <img id="logo" src="http://localhost:8082/profiles/acquia/AcquiaDrupalLogoInstaller.png" alt="My Acquia Drupal Site" />
+                <h2 class="element-invisible">Installation tasks</h2><ol class="task-list"><li class="done">Choose profile<span class="element-invisible">(done)</span></li><li class="done">Choose language<span class="element-invisible">(done)</span></li><li class="done">Verify requirements<span class="element-invisible">(done)</span></li><li class="done">Set up database<span class="element-invisible">(done)</span></li><li class="done">Install profile<span class="element-invisible">(done)</span></li><li class="done">Configure site<span class="element-invisible">(done)</span></li><li class="done">Finished<span class="element-invisible">(done)</span></li></ol>      </div>
+    
+    <div id="content" class="clearfix">
+                  <p>Congratulations, you installed Acquia Drupal!</p><p><a href="/">Visit your new site</a>.</p>    </div>
+
+  </div>
+
+  
+  </body>
+</html>
+
+========================
+[06:44:54] DWI: finished.
+[06:44:54] Stop MySQL
+[06:44:54] MySQL pid:4016
+[06:44:54] Exec:mysqladmin.exe --defaults-file="D:\Programs\Acquia Dev Desktop\mysql\my.cnf" shutdown [cwd:D:\Programs\Acquia Dev Desktop\mysql\bin]
+[06:44:55] Exec result: 0 
+STDOUT: 
+STDERR:
+[06:44:55] Stop Apache
+[06:44:55] Apache pid:1964
+[06:44:55] Exec:taskkill.exe /F /T /PID 1964 [cwd:D:\Programs\Acquia Dev Desktop\common]
+[06:44:55] Exec result: 0 
+STDOUT:SUCCESS: The process with PID 4244 child of PID 1964 has been terminated.
+SUCCESS: The process with PID 1964 child of PID 4540 has been terminated.
+ 
+STDERR:
+[06:44:56] Post install script completed successfully
+[t:1168] 2:45:52 PM: === Logging started (v:7.19.18) ===
+[t:1168] 2:45:52 PM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:1168] 2:45:52 PM: Initialize MySQL
+[t:1168] 2:45:52 PM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:1168] 2:45:52 PM: Initialize site manager
+[t:1168] 2:45:52 PM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:1168] 2:45:52 PM: Create main window
+[t:1168] 2:45:52 PM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:1168] 2:45:52 PM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:1168] 2:45:52 PM: Server uses DDE
+[t:1168] 2:45:52 PM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:1168] 2:45:52 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:1168] 2:45:53 PM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:1168] 2:45:53 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:1168] 2:46:02 PM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:1168] 2:46:02 PM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:1168] 2:46:02 PM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:1168] 2:46:02 PM: Exit code:0
+[t:1168] 2:46:04 PM: === Logging stopped ===
+[t:5612] 2:47:50 PM: === Logging started (v:7.19.18) ===
+[t:5612] 2:47:50 PM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:5612] 2:47:50 PM: Initialize MySQL
+[t:5612] 2:47:50 PM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:5612] 2:47:50 PM: Initialize site manager
+[t:5612] 2:47:50 PM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:5612] 2:47:50 PM: Create main window
+[t:5612] 2:47:50 PM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:5612] 2:47:50 PM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:5612] 2:47:50 PM: Server uses DDE
+[t:5612] 2:47:50 PM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:5612] 2:47:50 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:5612] 2:47:50 PM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:5612] 2:47:50 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:5612] 2:47:54 PM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:5612] 2:47:54 PM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:5612] 2:47:54 PM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:5612] 2:47:54 PM: Exit code:0
+[t:5612] 2:47:56 PM: === Logging stopped ===
+[t:2756] 2:48:16 PM: === Logging started (v:7.19.18) ===
+[t:2756] 2:48:16 PM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:2756] 2:48:16 PM: Initialize MySQL
+[t:2756] 2:48:16 PM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:2756] 2:48:16 PM: Initialize site manager
+[t:2756] 2:48:16 PM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:2756] 2:48:16 PM: Create main window
+[t:2756] 2:48:16 PM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:2756] 2:48:16 PM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:2756] 2:48:16 PM: Server uses DDE
+[t:2756] 2:48:16 PM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:2756] 2:48:16 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:2756] 2:48:16 PM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:2756] 2:48:16 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:2756] 2:48:30 PM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:2756] 2:48:30 PM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:2756] 2:48:30 PM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:2756] 2:48:30 PM: Exit code:0
+[t:2756] 2:48:34 PM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:2756] 2:48:34 PM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:2756] 2:48:34 PM: === Logging stopped ===
+[t:4696] 2:49:43 PM: === Logging started (v:7.19.18) ===
+[t:4696] 2:49:43 PM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:4696] 2:49:43 PM: Initialize MySQL
+[t:4696] 2:49:43 PM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:4696] 2:49:43 PM: Initialize site manager
+[t:4696] 2:49:43 PM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:4696] 2:49:43 PM: Create main window
+[t:4696] 2:49:43 PM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:4696] 2:49:43 PM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:4696] 2:49:43 PM: Server uses DDE
+[t:4696] 2:49:43 PM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:4696] 2:49:43 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:4696] 2:49:44 PM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:4696] 2:49:44 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:4696] 2:49:48 PM: Open Settings dialog
+[t:4696] 2:50:00 PM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:4696] 2:50:00 PM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:4696] 2:50:00 PM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:4696] 2:50:00 PM: Exit code:0
+[t:4696] 2:50:04 PM: === Logging stopped ===
+[t:4756] 2:50:09 PM: === Logging started (v:7.19.18) ===
+[t:4756] 2:50:09 PM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:4756] 2:50:09 PM: Initialize MySQL
+[t:4756] 2:50:09 PM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:4756] 2:50:09 PM: Initialize site manager
+[t:4756] 2:50:09 PM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:4756] 2:50:09 PM: Create main window
+[t:4756] 2:50:09 PM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:4756] 2:50:09 PM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:4756] 2:50:09 PM: Server uses DDE
+[t:4756] 2:50:09 PM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:4756] 2:50:09 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:4756] 2:50:10 PM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:4756] 2:50:10 PM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:4756] 2:50:10 PM: mysql connect. host: port:33066 user:root
+[t:4756] 2:50:10 PM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4756] 2:50:10 PM: Run SQL: USE `acquia_drupal`
+[t:4756] 2:50:10 PM: Run SQL: SHOW TABLES
+[t:4756] 2:50:10 PM: Open URL in browser:'http://localhost:8082/'
+[t:4756] 3:07:36 PM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:4756] 3:07:36 PM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:4756] 3:07:36 PM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:4756] 3:07:36 PM: Exit code:0
+[t:4756] 3:07:40 PM: === Logging stopped ===
+[t:2932] 2:29:59 AM: === Logging started (v:7.19.18) ===
+[t:2932] 2:29:59 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:2932] 2:29:59 AM: Initialize MySQL
+[t:2932] 2:29:59 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:2932] 2:29:59 AM: Initialize site manager
+[t:2932] 2:29:59 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:2932] 2:29:59 AM: Create main window
+[t:2932] 2:29:59 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:2932] 2:29:59 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:2932] 2:29:59 AM: Server uses DDE
+[t:2932] 2:29:59 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:2932] 2:29:59 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:2932] 2:30:00 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:2932] 2:30:00 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:2932] 2:30:00 AM: mysql connect. host: port:33066 user:root
+[t:2932] 2:30:00 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:2932] 2:30:00 AM: Run SQL: USE `acquia_drupal`
+[t:2932] 2:30:00 AM: Run SQL: SHOW TABLES
+[t:2932] 2:30:00 AM: Open URL in browser:'http://localhost:8082/'
+[t:2932] 2:30:09 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:2932] 2:30:09 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:2932] 2:30:09 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:2932] 2:30:09 AM: Exit code:0
+[t:2932] 2:30:12 AM: === Logging stopped ===
+[t:2592] 2:34:23 AM: === Logging started (v:7.19.18) ===
+[t:2592] 2:34:23 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:2592] 2:34:23 AM: Initialize MySQL
+[t:2592] 2:34:23 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:2592] 2:34:23 AM: Initialize site manager
+[t:2592] 2:34:23 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:2592] 2:34:23 AM: Create main window
+[t:2592] 2:34:23 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:2592] 2:34:23 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:2592] 2:34:23 AM: Server uses DDE
+[t:2592] 2:34:23 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:2592] 2:34:23 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:2592] 2:34:23 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:2592] 2:34:23 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:2592] 2:34:24 AM: mysql connect. host: port:33066 user:root
+[t:2592] 2:34:24 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:2592] 2:34:24 AM: Run SQL: USE `acquia_drupal`
+[t:2592] 2:34:24 AM: Run SQL: SHOW TABLES
+[t:2592] 2:34:24 AM: Open URL in browser:'http://localhost:8082/'
+[t:2592] 2:34:36 AM: Open Settings dialog
+[t:2592] 2:35:24 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:2592] 2:35:24 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:2592] 2:35:24 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:2592] 2:35:24 AM: Exit code:0
+[t:2592] 2:35:29 AM: Error: CleanupOnStop(): Process mysqld.exe(5708) is still running
+[t:2592] 2:35:29 AM: === Logging stopped ===
+[t:3388] 2:57:33 AM: === Logging started (v:7.19.18) ===
+[t:3388] 2:57:33 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:3388] 2:57:33 AM: Initialize MySQL
+[t:3388] 2:57:33 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:3388] 2:57:33 AM: Initialize site manager
+[t:3388] 2:57:33 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:3388] 2:57:33 AM: Create main window
+[t:3388] 2:57:33 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:3388] 2:57:33 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:3388] 2:57:33 AM: Server uses DDE
+[t:3388] 2:57:33 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:3388] 2:57:33 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:3388] 2:57:33 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:3388] 2:57:33 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:3388] 2:57:34 AM: mysql connect. host: port:33066 user:root
+[t:3388] 2:57:34 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:3388] 2:57:34 AM: Run SQL: USE `acquia_drupal`
+[t:3388] 2:57:34 AM: Run SQL: SHOW TABLES
+[t:3388] 2:57:34 AM: Open URL in browser:'http://localhost:8082/'
+[t:3388] 2:58:41 AM: mysql connect. host: port:33066 user:root
+[t:3388] 2:58:41 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:3388] 2:58:41 AM: Run SQL: USE `acquia_drupal`
+[t:3388] 2:58:41 AM: Run SQL: SHOW TABLES
+[t:3388] 2:58:41 AM: Open URL in browser:'http://localhost:8082/'
+[t:3388] 3:03:08 AM: mysql connect. host: port:33066 user:root
+[t:3388] 3:03:08 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:3388] 3:03:08 AM: Run SQL: USE `acquia_drupal`
+[t:3388] 3:03:08 AM: Run SQL: SHOW TABLES
+[t:3388] 3:03:08 AM: Open URL in browser:'http://localhost:8082/'
+[t:3388] 3:25:36 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:3388] 3:25:36 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:3388] 3:25:36 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:3388] 3:25:36 AM: Exit code:0
+[t:3388] 3:25:39 AM: === Logging stopped ===
+[t:4524] 3:25:43 AM: === Logging started (v:7.19.18) ===
+[t:4524] 3:25:43 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:4524] 3:25:43 AM: Initialize MySQL
+[t:4524] 3:25:43 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:4524] 3:25:43 AM: Initialize site manager
+[t:4524] 3:25:43 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:4524] 3:25:43 AM: Create main window
+[t:4524] 3:25:43 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:4524] 3:25:43 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:4524] 3:25:43 AM: Server uses DDE
+[t:4524] 3:25:43 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:4524] 3:25:43 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:4524] 3:25:43 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:4524] 3:25:43 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:4524] 3:25:44 AM: mysql connect. host: port:33066 user:root
+[t:4524] 3:25:44 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4524] 3:25:44 AM: Run SQL: USE `acquia_drupal`
+[t:4524] 3:25:44 AM: Run SQL: SHOW TABLES
+[t:4524] 3:25:44 AM: Open URL in browser:'http://localhost:8082/'
+[t:4524] 3:25:44 AM: mysql connect. host: port:33066 user:root
+[t:4524] 3:25:44 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4524] 3:25:44 AM: Run SQL: USE `acquia_drupal`
+[t:4524] 3:25:44 AM: Run SQL: SHOW TABLES
+[t:4524] 3:25:44 AM: Open URL in browser:'http://localhost:8082/'
+[t:4524] 3:37:57 AM: mysql connect. host: port:33066 user:root
+[t:4524] 3:37:57 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4524] 3:37:57 AM: Run SQL: USE `acquia_drupal`
+[t:4524] 3:37:57 AM: Run SQL: SHOW TABLES
+[t:4524] 3:37:57 AM: Open URL in browser:'http://localhost:8082/'
+[t:4524] 3:38:10 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:4524] 3:38:10 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:4524] 3:38:10 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:4524] 3:38:11 AM: Exit code:0
+[t:4524] 3:38:14 AM: === Logging stopped ===
+[t:4304] 3:38:22 AM: === Logging started (v:7.19.18) ===
+[t:4304] 3:38:22 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:4304] 3:38:22 AM: Initialize MySQL
+[t:4304] 3:38:22 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:4304] 3:38:22 AM: Initialize site manager
+[t:4304] 3:38:22 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:4304] 3:38:22 AM: Create main window
+[t:4304] 3:38:22 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:4304] 3:38:22 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:4304] 3:38:22 AM: Server uses DDE
+[t:4304] 3:38:22 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:4304] 3:38:22 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:4304] 3:38:23 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:4304] 3:38:23 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:4304] 3:38:23 AM: mysql connect. host: port:33066 user:root
+[t:4304] 3:38:23 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4304] 3:38:23 AM: Run SQL: USE `acquia_drupal`
+[t:4304] 3:38:23 AM: Run SQL: SHOW TABLES
+[t:4304] 3:38:23 AM: Open URL in browser:'http://localhost:8082/'
+[t:4304] 5:54:16 AM: Open Settings dialog
+[t:4304] 6:48:24 AM: mysql connect. host: port:33066 user:root
+[t:4304] 6:48:24 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4304] 6:48:24 AM: Run SQL: USE `acquia_drupal`
+[t:4304] 6:48:24 AM: Run SQL: SHOW TABLES
+[t:4304] 6:48:24 AM: Open URL in browser:'http://localhost:8082/'
+[t:4304] 6:59:22 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:4304] 6:59:22 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:4304] 6:59:22 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:4304] 6:59:22 AM: Exit code:0
+[t:4304] 6:59:28 AM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:4304] 6:59:28 AM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:4304] 6:59:28 AM: === Logging stopped ===
+[t:2044] 3:36:29 AM: === Logging started (v:7.19.18) ===
+[t:2044] 3:36:29 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:2044] 3:36:29 AM: Initialize MySQL
+[t:2044] 3:36:29 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:2044] 3:36:29 AM: Initialize site manager
+[t:2044] 3:36:29 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:2044] 3:36:29 AM: Create main window
+[t:2044] 3:36:29 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:2044] 3:36:29 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:2044] 3:36:29 AM: Server uses DDE
+[t:2044] 3:36:29 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:2044] 3:36:29 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:2044] 3:36:29 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:2044] 3:36:29 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:2044] 3:36:33 AM: Open Settings dialog

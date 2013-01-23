@@ -1,0 +1,1 @@
+@"D:\Programs\Acquia Dev Desktop\mysql\bin\mysql.exe" --defaults-file="D:\Programs\Acquia Dev Desktop\mysql\my.cnf" %*

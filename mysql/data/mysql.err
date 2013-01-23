@@ -1,0 +1,175 @@
+130121 22:44:25 [Note] Plugin 'FEDERATED' is disabled.
+130121 22:44:25  InnoDB: Initializing buffer pool, size = 8.0M
+130121 22:44:25  InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file .\ibdata1 did not exist:
+InnoDB: a new database to be created!
+130121 22:44:25  InnoDB: Setting file .\ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+130121 22:44:25  InnoDB: Log file .\ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile0 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+130121 22:44:25  InnoDB: Log file .\ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile1 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+130121 22:44:26  InnoDB: Started; log sequence number 0 0
+130121 22:44:26 [Note] Event Scheduler: Loaded 0 events
+130121 22:44:26 [Note] mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130121 22:44:55 [Note] mysqld.exe: Normal shutdown
+
+130121 22:44:55 [Note] Event Scheduler: Purging the queue. 0 events
+130121 22:44:55  InnoDB: Starting shutdown...
+130121 22:44:58  InnoDB: Shutdown completed; log sequence number 0 4898964
+130121 22:44:58 [Note] mysqld.exe: Shutdown complete
+
+130121 22:45:53 [Note] Plugin 'FEDERATED' is disabled.
+130121 22:45:53  InnoDB: Initializing buffer pool, size = 8.0M
+130121 22:45:53  InnoDB: Completed initialization of buffer pool
+130121 22:45:53  InnoDB: Started; log sequence number 0 4898964
+130121 22:45:53 [Note] Event Scheduler: Loaded 0 events
+130121 22:45:53 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130121 22:46:02 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130121 22:46:02 [Note] Event Scheduler: Purging the queue. 0 events
+130121 22:46:02  InnoDB: Starting shutdown...
+130121 22:46:04  InnoDB: Shutdown completed; log sequence number 0 4899150
+130121 22:46:04 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130121 22:47:51 [Note] Plugin 'FEDERATED' is disabled.
+130121 22:47:51  InnoDB: Initializing buffer pool, size = 8.0M
+130121 22:47:51  InnoDB: Completed initialization of buffer pool
+130121 22:47:51  InnoDB: Started; log sequence number 0 4899150
+130121 22:47:51 [Note] Event Scheduler: Loaded 0 events
+130121 22:47:51 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130121 22:47:54 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130121 22:47:54 [Note] Event Scheduler: Purging the queue. 0 events
+130121 22:47:54  InnoDB: Starting shutdown...
+130121 22:47:56  InnoDB: Shutdown completed; log sequence number 0 4899150
+130121 22:47:56 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130121 22:48:16 [Note] Plugin 'FEDERATED' is disabled.
+130121 22:48:16  InnoDB: Initializing buffer pool, size = 8.0M
+130121 22:48:16  InnoDB: Completed initialization of buffer pool
+130121 22:48:17  InnoDB: Started; log sequence number 0 4899150
+130121 22:48:17 [Note] Event Scheduler: Loaded 0 events
+130121 22:48:17 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130121 22:48:30 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130121 22:48:30 [Note] Event Scheduler: Purging the queue. 0 events
+130121 22:48:30  InnoDB: Starting shutdown...
+130121 22:48:32  InnoDB: Shutdown completed; log sequence number 0 4899150
+130121 22:48:32 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130121 22:49:44 [Note] Plugin 'FEDERATED' is disabled.
+130121 22:49:44  InnoDB: Initializing buffer pool, size = 8.0M
+130121 22:49:44  InnoDB: Completed initialization of buffer pool
+130121 22:49:44  InnoDB: Started; log sequence number 0 4899150
+130121 22:49:44 [Note] Event Scheduler: Loaded 0 events
+130121 22:49:44 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130121 22:50:00 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130121 22:50:00 [Note] Event Scheduler: Purging the queue. 0 events
+130121 22:50:00  InnoDB: Starting shutdown...
+130121 22:50:04  InnoDB: Shutdown completed; log sequence number 0 4899150
+130121 22:50:04 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130121 22:50:10 [Note] Plugin 'FEDERATED' is disabled.
+130121 22:50:10  InnoDB: Initializing buffer pool, size = 8.0M
+130121 22:50:10  InnoDB: Completed initialization of buffer pool
+130121 22:50:10  InnoDB: Started; log sequence number 0 4899150
+130121 22:50:10 [Note] Event Scheduler: Loaded 0 events
+130121 22:50:10 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130121 23:07:36 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130121 23:07:36 [Note] Event Scheduler: Purging the queue. 0 events
+130121 23:07:36  InnoDB: Starting shutdown...
+130121 23:07:40  InnoDB: Shutdown completed; log sequence number 0 5793946
+130121 23:07:40 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130122 10:30:00 [Note] Plugin 'FEDERATED' is disabled.
+130122 10:30:00  InnoDB: Initializing buffer pool, size = 8.0M
+130122 10:30:00  InnoDB: Completed initialization of buffer pool
+130122 10:30:00  InnoDB: Started; log sequence number 0 5793946
+130122 10:30:00 [Note] Event Scheduler: Loaded 0 events
+130122 10:30:00 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130122 10:30:09 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130122 10:30:09 [Note] Event Scheduler: Purging the queue. 0 events
+130122 10:30:09  InnoDB: Starting shutdown...
+130122 10:30:12  InnoDB: Shutdown completed; log sequence number 0 5856877
+130122 10:30:12 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130122 10:34:23 [Note] Plugin 'FEDERATED' is disabled.
+130122 10:34:23  InnoDB: Initializing buffer pool, size = 8.0M
+130122 10:34:23  InnoDB: Completed initialization of buffer pool
+130122 10:34:23  InnoDB: Started; log sequence number 0 5856877
+130122 10:34:24 [Note] Event Scheduler: Loaded 0 events
+130122 10:34:24 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130122 10:35:24 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130122 10:35:24 [Note] Event Scheduler: Purging the queue. 0 events
+130122 10:35:24  InnoDB: Starting shutdown...
+130122 10:35:29  InnoDB: Shutdown completed; log sequence number 0 5905181
+130122 10:35:29 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130122 10:57:33 [Note] Plugin 'FEDERATED' is disabled.
+130122 10:57:33  InnoDB: Initializing buffer pool, size = 8.0M
+130122 10:57:33  InnoDB: Completed initialization of buffer pool
+130122 10:57:34  InnoDB: Started; log sequence number 0 5905181
+130122 10:57:34 [Note] Event Scheduler: Loaded 0 events
+130122 10:57:34 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130122 11:25:36 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130122 11:25:36 [Note] Event Scheduler: Purging the queue. 0 events
+130122 11:25:36  InnoDB: Starting shutdown...
+130122 11:25:39  InnoDB: Shutdown completed; log sequence number 0 6073751
+130122 11:25:39 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130122 11:25:44 [Note] Plugin 'FEDERATED' is disabled.
+130122 11:25:44  InnoDB: Initializing buffer pool, size = 8.0M
+130122 11:25:44  InnoDB: Completed initialization of buffer pool
+130122 11:25:44  InnoDB: Started; log sequence number 0 6073751
+130122 11:25:44 [Note] Event Scheduler: Loaded 0 events
+130122 11:25:44 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130122 11:38:11 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130122 11:38:11 [Note] Event Scheduler: Purging the queue. 0 events
+130122 11:38:11  InnoDB: Starting shutdown...
+130122 11:38:14  InnoDB: Shutdown completed; log sequence number 0 6082171
+130122 11:38:14 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130122 11:38:23 [Note] Plugin 'FEDERATED' is disabled.
+130122 11:38:23  InnoDB: Initializing buffer pool, size = 8.0M
+130122 11:38:23  InnoDB: Completed initialization of buffer pool
+130122 11:38:23  InnoDB: Started; log sequence number 0 6082171
+130122 11:38:23 [Note] Event Scheduler: Loaded 0 events
+130122 11:38:23 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
+130122 14:59:22 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Normal shutdown
+
+130122 14:59:22 [Note] Event Scheduler: Purging the queue. 0 events
+130122 14:59:22  InnoDB: Starting shutdown...
+130122 14:59:24  InnoDB: Shutdown completed; log sequence number 0 7394358
+130122 14:59:24 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: Shutdown complete
+
+130123 11:36:29 [Note] Plugin 'FEDERATED' is disabled.
+130123 11:36:30  InnoDB: Initializing buffer pool, size = 8.0M
+130123 11:36:30  InnoDB: Completed initialization of buffer pool
+130123 11:36:30  InnoDB: Started; log sequence number 0 7394358
+130123 11:36:30 [Note] Event Scheduler: Loaded 0 events
+130123 11:36:30 [Note] D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.1.66-community'  socket: ''  port: 33066  MySQL Community Server (GPL)
