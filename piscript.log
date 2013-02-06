@@ -1645,3 +1645,415 @@ EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
 ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
 ENV:
 [t:2044] 3:36:33 AM: Open Settings dialog
+[t:2044] 7:03:25 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:2044] 7:03:25 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:2044] 7:03:25 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:2044] 7:03:25 AM: Exit code:0
+[t:2044] 7:03:32 AM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:2044] 7:03:32 AM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:2044] 7:03:32 AM: === Logging stopped ===
+[t:3624] 1:49:00 AM: === Logging started (v:7.19.18) ===
+[t:3624] 1:49:00 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:3624] 1:49:00 AM: Initialize MySQL
+[t:3624] 1:49:00 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:3624] 1:49:00 AM: Initialize site manager
+[t:3624] 1:49:00 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:3624] 1:49:00 AM: Create main window
+[t:3624] 1:49:01 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:3624] 1:49:01 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:3624] 1:49:01 AM: Server uses DDE
+[t:3624] 1:49:01 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:3624] 1:49:01 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:3624] 1:49:01 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:3624] 1:49:01 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:3624] 1:49:04 AM: mysql connect. host: port:33066 user:root
+[t:3624] 1:49:04 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:3624] 1:49:04 AM: Run SQL: USE `acquia_drupal`
+[t:3624] 1:49:04 AM: Run SQL: SHOW TABLES
+[t:3624] 1:49:04 AM: Open URL in browser:'http://localhost:8082/'
+[t:3624] 5:14:31 AM: mysql connect. host: port:33066 user:root
+[t:3624] 5:14:31 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:3624] 5:14:31 AM: Run SQL: USE `acquia_drupal`
+[t:3624] 5:14:31 AM: Run SQL: SHOW TABLES
+[t:3624] 5:14:31 AM: Open URL in browser:'http://localhost:8082/'
+[t:3624] 7:03:22 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:3624] 7:03:22 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:3624] 7:03:22 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:3624] 7:03:22 AM: Exit code:0
+[t:3624] 7:03:24 AM: === Logging stopped ===
+[t:5052] 1:13:06 AM: === Logging started (v:7.19.18) ===
+[t:5052] 1:13:06 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:5052] 1:13:06 AM: Initialize MySQL
+[t:5052] 1:13:06 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:5052] 1:13:06 AM: Initialize site manager
+[t:5052] 1:13:06 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:5052] 1:13:06 AM: Create main window
+[t:5052] 1:13:06 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:5052] 1:13:06 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:5052] 1:13:06 AM: Server uses DDE
+[t:5052] 1:13:06 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:5052] 1:13:06 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:5052] 1:13:07 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:5052] 1:13:07 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:5052] 1:13:09 AM: mysql connect. host: port:33066 user:root
+[t:5052] 1:13:09 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:5052] 1:13:09 AM: Run SQL: USE `acquia_drupal`
+[t:5052] 1:13:09 AM: Run SQL: SHOW TABLES
+[t:5052] 1:13:09 AM: Open URL in browser:'http://localhost:8082/'
+[t:5052] 7:00:23 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:5052] 7:00:23 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:5052] 7:00:23 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:5052] 7:00:24 AM: Exit code:0
+[t:5052] 7:00:26 AM: === Logging stopped ===
+[t:4956] 1:06:06 AM: === Logging started (v:7.19.18) ===
+[t:4956] 1:06:06 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:4956] 1:06:06 AM: Initialize MySQL
+[t:4956] 1:06:06 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:4956] 1:06:06 AM: Initialize site manager
+[t:4956] 1:06:06 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:4956] 1:06:06 AM: Create main window
+[t:4956] 1:06:06 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:4956] 1:06:06 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:4956] 1:06:06 AM: Server uses DDE
+[t:4956] 1:06:06 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:4956] 1:06:06 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:4956] 1:06:06 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:4956] 1:06:06 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:4956] 1:06:09 AM: mysql connect. host: port:33066 user:root
+[t:4956] 1:06:09 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4956] 1:06:09 AM: Run SQL: USE `acquia_drupal`
+[t:4956] 1:06:09 AM: Run SQL: SHOW TABLES
+[t:4956] 1:06:09 AM: Open URL in browser:'http://localhost:8082/'
+[t:4956] 6:57:32 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:4956] 6:57:32 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:4956] 6:57:32 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:4956] 6:57:32 AM: Exit code:0
+[t:4956] 6:57:39 AM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:4956] 6:57:39 AM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:4956] 6:57:39 AM: === Logging stopped ===
+[t:4304] 3:38:52 AM: === Logging started (v:7.19.18) ===
+[t:4304] 3:38:52 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:4304] 3:38:52 AM: Initialize MySQL
+[t:4304] 3:38:52 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:4304] 3:38:52 AM: Initialize site manager
+[t:4304] 3:38:52 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:4304] 3:38:52 AM: Create main window
+[t:4304] 3:38:52 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:4304] 3:38:52 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:4304] 3:38:52 AM: Server uses DDE
+[t:4304] 3:38:52 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:4304] 3:38:52 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:4304] 3:38:53 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:4304] 3:38:53 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:4304] 3:38:56 AM: mysql connect. host: port:33066 user:root
+[t:4304] 3:38:57 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4304] 3:38:57 AM: Run SQL: USE `acquia_drupal`
+[t:4304] 3:38:57 AM: Run SQL: SHOW TABLES
+[t:4304] 3:38:57 AM: Open URL in browser:'http://localhost:8082/'
+[t:4304] 4:38:55 AM: mysql connect. host: port:33066 user:root
+[t:4304] 4:38:55 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4304] 4:38:55 AM: Run SQL: USE `acquia_drupal`
+[t:4304] 4:38:55 AM: Run SQL: SHOW TABLES
+[t:4304] 4:38:55 AM: Open URL in browser:'http://localhost:8082/'
+[t:4304] 5:57:53 AM: mysql connect. host: port:33066 user:root
+[t:4304] 5:57:53 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:4304] 5:57:53 AM: Run SQL: USE `acquia_drupal`
+[t:4304] 5:57:53 AM: Run SQL: SHOW TABLES
+[t:4304] 5:57:53 AM: Open URL in browser:'http://localhost:8082/'
+[t:4304] 7:02:19 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:4304] 7:02:19 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:4304] 7:02:19 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:4304] 7:02:19 AM: Exit code:0
+[t:4304] 7:02:23 AM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:4304] 7:02:23 AM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:4304] 7:02:23 AM: === Logging stopped ===
+[t:5024] 11:14:13 AM: === Logging started (v:7.19.18) ===
+[t:5024] 11:14:13 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:5024] 11:14:13 AM: Initialize MySQL
+[t:5024] 11:14:13 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:5024] 11:14:13 AM: Initialize site manager
+[t:5024] 11:14:13 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:5024] 11:14:13 AM: Create main window
+[t:5024] 11:14:13 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:5024] 11:14:13 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:5024] 11:14:13 AM: Server uses DDE
+[t:5024] 11:14:13 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:5024] 11:14:13 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:5024] 11:14:13 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:5024] 11:14:13 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:5024] 11:26:42 AM: mysql connect. host: port:33066 user:root
+[t:5024] 11:26:42 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:5024] 11:26:42 AM: Run SQL: USE `acquia_drupal`
+[t:5024] 11:26:42 AM: Run SQL: SHOW TABLES
+[t:5024] 11:26:42 AM: Open URL in browser:'http://localhost:8082/'
+[t:5024] 11:36:04 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:5024] 11:36:04 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:5024] 11:36:04 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:5024] 11:36:04 AM: Exit code:0
+[t:5024] 11:36:09 AM: === Logging stopped ===
+[t:6840] 1:52:38 AM: === Logging started (v:7.19.18) ===
+[t:6840] 1:52:38 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:6840] 1:52:38 AM: Initialize MySQL
+[t:6840] 1:52:38 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:6840] 1:52:38 AM: Initialize site manager
+[t:6840] 1:52:38 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:6840] 1:52:38 AM: Create main window
+[t:6840] 1:52:38 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:6840] 1:52:38 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:6840] 1:52:38 AM: Server uses DDE
+[t:6840] 1:52:38 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:6840] 1:52:38 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:6840] 1:52:39 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:6840] 1:52:39 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:6840] 1:52:40 AM: mysql connect. host: port:33066 user:root
+[t:6840] 1:52:40 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:6840] 1:52:40 AM: Run SQL: USE `acquia_drupal`
+[t:6840] 1:52:40 AM: Run SQL: SHOW TABLES
+[t:6840] 1:52:40 AM: Open URL in browser:'http://localhost:8082/'
+[t:6840] 5:36:06 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:6840] 5:36:06 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:6840] 5:36:06 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:6840] 5:36:06 AM: Exit code:0
+[t:6840] 5:36:12 AM: Open URL in browser:'http://localhost:8082/'
+[t:6840] 5:36:34 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:6840] 5:36:34 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:6840] 5:36:34 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:6840] 5:36:34 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:6840] 5:36:37 AM: mysql connect. host: port:33066 user:root
+[t:6840] 5:36:37 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:6840] 5:36:37 AM: Run SQL: USE `acquia_drupal`
+[t:6840] 5:36:37 AM: Run SQL: SHOW TABLES
+[t:6840] 5:36:37 AM: Open URL in browser:'http://localhost:8082/'
+[t:6840] 5:38:04 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:6840] 5:38:04 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:6840] 5:38:04 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:6840] 5:38:05 AM: Exit code:0
+[t:6840] 5:38:10 AM: Open URL in browser:'http://localhost:8082/'
+[t:6840] 5:38:16 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:6840] 5:38:16 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:6840] 5:38:16 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:6840] 5:38:16 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:6840] 5:38:21 AM: mysql connect. host: port:33066 user:root
+[t:6840] 5:38:21 AM: Run SQL: SHOW DATABASES LIKE 'acquia_drupal'
+[t:6840] 5:38:21 AM: Run SQL: USE `acquia_drupal`
+[t:6840] 5:38:21 AM: Run SQL: SHOW TABLES
+[t:6840] 5:38:21 AM: Open URL in browser:'http://localhost:8082/'
+[t:6840] 5:40:05 AM: Open Settings dialog
+[t:6840] 5:42:53 AM: Open Settings dialog
+[t:6840] 5:44:46 AM: Open Settings dialog
+[t:6840] 5:45:56 AM: mysql connect. host: port:33066 user:root
+[t:6840] 5:45:56 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:6840] 5:45:56 AM: Importing site (new db). codebase: 'D:\Programs\Acquia Dev Desktop\openfolio-7.x-1.0-alpha3' db:'openfolio' host:'follio.localhost' urlpath:'' 
+[t:6840] 5:45:56 AM: mysql connect. host: port:33066 user:root
+[t:6840] 5:45:56 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:6840] 5:45:56 AM: Run SQL: CREATE DATABASE `openfolio`
+[t:6840] 5:45:56 AM: Run SQL: GRANT ALL PRIVILEGES ON `openfolio`.* TO `drupaluser`@'localhost' IDENTIFIED BY ''
+[t:6840] 5:45:56 AM: Run SQL: FLUSH PRIVILEGES
+[t:6840] 5:45:56 AM: acqSvcController::RestartSvc() SvcId:0 CurSt:run 
+[t:6840] 5:45:56 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:6840] 5:45:56 AM: mysql connect. host: port:33066 user:root
+[t:6840] 5:45:56 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:6840] 5:45:56 AM: Run SQL: USE `openfolio`
+[t:6840] 5:45:56 AM: Run SQL: SHOW TABLES
+[t:6840] 5:45:56 AM: Open URL in browser:'http://follio.localhost:8082/install.php'
+[t:6840] 6:49:10 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:6840] 6:49:10 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:6840] 6:49:10 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:6840] 6:49:10 AM: Exit code:0
+[t:6840] 6:49:19 AM: Open URL in browser:'http://follio.localhost:8082/'
+[t:6840] 6:49:23 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:6840] 6:49:23 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:6840] 6:49:23 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:6840] 6:49:23 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:6840] 6:49:27 AM: mysql connect. host: port:33066 user:root
+[t:6840] 6:49:27 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:6840] 6:49:27 AM: Run SQL: USE `openfolio`
+[t:6840] 6:49:27 AM: Run SQL: SHOW TABLES
+[t:6840] 6:49:27 AM: Open URL in browser:'http://follio.localhost:8082/'
+[t:6840] 6:53:06 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:6840] 6:53:06 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:6840] 6:53:06 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:6840] 6:53:06 AM: Exit code:0
+[t:6840] 6:53:10 AM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:6840] 6:53:10 AM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:6840] 6:53:10 AM: === Logging stopped ===
+[t:3260] 1:17:22 AM: === Logging started (v:7.19.18) ===
+[t:3260] 1:17:22 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:3260] 1:17:22 AM: Initialize MySQL
+[t:3260] 1:17:22 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:3260] 1:17:22 AM: Initialize site manager
+[t:3260] 1:17:22 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:3260] 1:17:22 AM: Create main window
+[t:3260] 1:17:22 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:3260] 1:17:22 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:3260] 1:17:22 AM: Server uses DDE
+[t:3260] 1:17:22 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:3260] 1:17:22 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:3260] 1:17:23 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:3260] 1:17:23 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:3260] 1:17:26 AM: mysql connect. host: port:33066 user:root
+[t:3260] 1:17:26 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:3260] 1:17:26 AM: Run SQL: USE `openfolio`
+[t:3260] 1:17:26 AM: Run SQL: SHOW TABLES
+[t:3260] 1:17:26 AM: Open URL in browser:'http://follio.localhost:8082/'
+[t:3260] 3:24:35 AM: mysql connect. host: port:33066 user:root
+[t:3260] 3:24:35 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:3260] 3:24:35 AM: Run SQL: USE `openfolio`
+[t:3260] 3:24:35 AM: Run SQL: SHOW TABLES
+[t:3260] 3:24:35 AM: Open URL in browser:'http://follio.localhost:8082/'
+[t:3260] 3:27:26 AM: mysql connect. host: port:33066 user:root
+[t:3260] 3:27:26 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:3260] 3:27:26 AM: Run SQL: USE `openfolio`
+[t:3260] 3:27:26 AM: Run SQL: SHOW TABLES
+[t:3260] 3:27:26 AM: Open URL in browser:'http://follio.localhost:8082/'
+[t:3260] 6:58:15 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:3260] 6:58:15 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:3260] 6:58:15 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:3260] 6:58:15 AM: Exit code:0
+[t:3260] 6:58:18 AM: acqSvcController::StopSvc() SvcId:0 CurSt:notR
+[t:3260] 6:58:18 AM: acqSvcController::StopSvc() SvcId:1 CurSt:notR
+[t:3260] 6:58:18 AM: === Logging stopped ===
+[t:1700] 1:10:58 AM: === Logging started (v:7.19.18) ===
+[t:1700] 1:10:58 AM: d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe
+[t:1700] 1:10:58 AM: Initialize MySQL
+[t:1700] 1:10:58 AM: Load mysql dll:D:\Programs\Acquia Dev Desktop\php5_2\libmysql.dll
+[t:1700] 1:10:58 AM: Initialize site manager
+[t:1700] 1:10:58 AM: acqSiteManager created. Sites dir: D:\Programs\Acquia Dev Desktop\site\\sites
+[t:1700] 1:10:58 AM: Create main window
+[t:1700] 1:10:58 AM: Start IPC server. (d:\programs\acquia dev desktop\acquiadevdesktopcontrolpanel\acquiadevdesktopcontrolpanel.exe)
+[t:1700] 1:10:58 AM: IPC server started. Name:ADCP-47b2437334a26b31413535f4636a9171
+[t:1700] 1:10:58 AM: Server uses DDE
+[t:1700] 1:10:58 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:1700] 1:10:58 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:1700] 1:10:58 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:1700] 1:10:58 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:1700] 1:11:03 AM: acqSvcController::StopSvc() SvcId:0 CurSt:run 
+[t:1700] 1:11:03 AM: acqSvcController::StopSvc() SvcId:1 CurSt:run 
+[t:1700] 1:11:03 AM: CCUtil::ExecEx() cmd:D:\Programs\Acquia Dev Desktop\mysql\bin\mysqladmin.exe
+arg: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf shutdown 
+env: 
+[t:1700] 1:11:03 AM: Exit code:0
+[t:1700] 1:11:05 AM: acqSvcController::StartSvc() SvcId:0 CurSt:notR
+[t:1700] 1:11:05 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:1700] 1:11:06 AM: acqSvcController::StartSvc() SvcId:1 CurSt:notR
+[t:1700] 1:11:06 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\mysql\bin\mysqld.exe
+ARG: --defaults-file=D:\Programs\Acquia Dev Desktop\mysql\my.cnf
+ENV:
+[t:1700] 1:11:07 AM: mysql connect. host: port:33066 user:root
+[t:1700] 1:11:07 AM: Run SQL: SHOW DATABASES LIKE 'openfolio'
+[t:1700] 1:11:07 AM: Run SQL: USE `openfolio`
+[t:1700] 1:11:07 AM: Run SQL: SHOW TABLES
+[t:1700] 1:11:07 AM: Open URL in browser:'http://follio.localhost:8082/'
+[t:1700] 1:20:56 AM: mysql connect. host: port:33066 user:root
+[t:1700] 1:20:56 AM: Run SQL: SHOW DATABASES LIKE 'SQLDatabase'
+[t:1700] 1:20:56 AM: Importing site (new db). codebase: 'D:\Programs\Acquia Dev Desktop\drupal-7.18' db:'SQLDatabase' host:'abc.localhost' urlpath:'' 
+[t:1700] 1:20:56 AM: mysql connect. host: port:33066 user:root
+[t:1700] 1:20:56 AM: Run SQL: SHOW DATABASES LIKE 'SQLDatabase'
+[t:1700] 1:20:56 AM: Run SQL: CREATE DATABASE `SQLDatabase`
+[t:1700] 1:20:56 AM: Run SQL: GRANT ALL PRIVILEGES ON `SQLDatabase`.* TO `drupaluser`@'localhost' IDENTIFIED BY ''
+[t:1700] 1:20:56 AM: Run SQL: FLUSH PRIVILEGES
+[t:1700] 1:20:56 AM: acqSvcController::RestartSvc() SvcId:0 CurSt:run 
+[t:1700] 1:20:56 AM: acqServerProcessBase::InitiateStart()
+EXEC: D:\Programs\Acquia Dev Desktop\apache\bin\httpd.exe
+ARG: -D php5_3 -f D:\Programs\Acquia Dev Desktop\apache\conf\httpd.conf
+ENV: COMMONPROGRAMFILES="C:\Program Files (x86)\Common Files" COMMONPROGRAMFILES(X86)="C:\Program Files (x86)\Common Files" WINDOWS_TRACING_LOGFILE="C:\BVTBin\Tests\installpackage\csilogfile.log" PROGRAMFILES(X86)="C:\Program Files (x86)" LOCALAPPDATA="C:\Users\Chris Nicolson\AppData\Local" PROCESSOR_ARCHITEW6432="AMD64" PATHEXT=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" WINDOWS_TRACING_FLAGS="3" TEMP="C:\Users\CHRISN~1\AppData\Local\Temp" PROGRAMFILES="C:\Program Files (x86)" COMPUTERNAME="STARSCREAM" LOGONSERVER="\\STARSCREAM" SYSTEMDRIVE="C:" PROCESSOR_IDENTIFIER="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" PUBLIC="C:\Users\Public" WINDIR="C:\Windows" ALLUSERSPROFILE="C:\ProgramData" PROCESSOR_LEVEL="6" PROGRAMW6432="C:\Program Files" PSMODULEPATH="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" COMMONPROGRAMW6432="C:\Program Files\Common Files" USERDOMAIN="Starscream" PATH="D:\Programs\Acquia Dev Desktop\php5_3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\" HOMEDRIVE="C:" PROCESSOR_REVISION="3a09" COMSPEC="C:\Windows\system32\cmd.exe" FP_NO_HOST_CHECK="NO" OS="Windows_NT" SYSTEMROOT="C:\Windows" TMP="C:\Users\CHRISN~1\AppData\Local\Temp" USERPROFILE="C:\Users\Chris Nicolson" NUMBER_OF_PROCESSORS="8" HOMEPATH="\Users\Chris Nicolson" APPDATA="C:\Users\Chris Nicolson\AppData\Roaming" USERNAME="Chris Nicolson" PROCESSOR_ARCHITECTURE="x86" PROGRAMDATA="C:\ProgramData"
+[t:1700] 1:20:57 AM: mysql connect. host: port:33066 user:root
+[t:1700] 1:20:57 AM: Run SQL: SHOW DATABASES LIKE 'SQLDatabase'
+[t:1700] 1:20:57 AM: Run SQL: USE `SQLDatabase`
+[t:1700] 1:20:57 AM: Run SQL: SHOW TABLES
+[t:1700] 1:20:57 AM: Open URL in browser:'http://abc.localhost:8082/install.php'
